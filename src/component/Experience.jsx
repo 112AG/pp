@@ -12,8 +12,10 @@ import varanasiArtist from "../assets/cities/varanasiArtist.png";
 gsap.registerPlugin(ScrollTrigger);
 
 // Memoized experience item component
+// Memoized experience item component
 const ExperienceItem = React.memo(({ exp, index }) => (
-  <div className="relative pl-14 sm:pl-16 md:pl-20 lg:pl-24 exp-item">
+  <div className="relative pl-14 sm:pl-16 md:pl-20 lg:pl-24 exp-item ">
+    {/* Landmark Icon */}
     <div className="absolute left-0 top-0 flex items-center justify-center w-8 sm:w-10 md:w-12 lg:w-16 flex-col">
       <img
         src={exp.icon}
@@ -23,14 +25,17 @@ const ExperienceItem = React.memo(({ exp, index }) => (
       />
     </div>
 
+    {/* Text Info */}
     <div>
-      <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-[40px] font-bold break-words whitespace-normal sm:whitespace-nowrap">
+      <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-[40px] font-bold font-presser-bold break-words whitespace-normal sm:whitespace-nowrap">
         {exp.role}
       </h3>
-      <p className="text-gray-300 text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-[20px] break-words">
+      <p className="text-gray-300 text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-[20px] font-maisonneue-medium break-words">
         {exp.company}
       </p>
-      <p className={`${exp.color} text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-[16px] font-semibold`}>
+      <p
+        className={`${exp.color} text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-[16px] font-semibold font-presser-bold`}
+      >
         {exp.location}
       </p>
     </div>
@@ -207,6 +212,7 @@ function Experience() {
       {/* Experience Section */}
       <div ref={containerRef} className="three mt-12 py-12 relative z-10">
         <h1
+          className="text-center font-extrabold leading-tight text-[30px] sm:text-[53px] md:text-[62px] lg:text-[84px] xl:text-[94px] text-[#EEE6E2] mb-8 tracking-wide px-4 font-presser-bold"
           style={{ letterSpacing: "0.04em" }}
         >
           EXPERIENCE
