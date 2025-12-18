@@ -207,7 +207,6 @@ function Experience() {
       {/* Experience Section */}
       <div ref={containerRef} className="three mt-12 py-12 relative z-10">
         <h1
-          className="text-center font-extrabold leading-tight text-[30px] sm:text-[53px] md:text-[62px] lg:text-[84px] xl:text-[94px] text-[#EEE6E2] mb-8 tracking-wide px-4"
           style={{ letterSpacing: "0.04em" }}
         >
           EXPERIENCE
