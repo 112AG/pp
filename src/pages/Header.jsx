@@ -6,8 +6,9 @@ function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full text-white z-50">
-      <div className=" mx-auto flex items-center justify-between px-6 sm:px-12 py-4">
+    <header className="fixed top-0 left-0 w-full text-white z-50 nav-gradient-blur">
+      
+      <div className=" mx-auto flex items-center justify-between px-6 sm:px-12 py-4 z-10 relative">
         {/* Logo */}
         <Link
           to="/"
@@ -171,6 +172,25 @@ function Header() {
           </NavLink>
         </div>
       )}
+      <style jsx>{`
+  .nav-gradient-blur {
+    background: rgba(0, 0, 0, 0);
+  }
+  
+  .nav-gradient-blur::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(12px);
+    mask-image: linear-gradient(to bottom, black 80%, black 40%, black 30%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, black 40%, black 30%, transparent 100%);
+    z-index: 0;
+  }
+`}</style>
     </header>
   );
 }
