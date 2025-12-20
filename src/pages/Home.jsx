@@ -227,7 +227,7 @@ function Home() {
             <span ref={num2Ref}>0</span>
             <span>+</span>
           </div>
-          <div className="absolute bottom-[26.5%] -right-[0%] -translate-x-1/2 text-[#0a0a0a] text-center -rotate-[17deg] font-presser-bold whitespace-nowrap text-[4vw]">
+          <div className="absolute bottom-[28%] sm:bottom-[26.5%] right-[10%] sm:-right-[10%] -translate-x-1/2 text-[#0a0a0a] text-center -rotate-[17deg] font-presser-bold whitespace-nowrap text-[4vw]">
             <span ref={num3Ref}>0</span>
             <span>+</span>
           </div>
