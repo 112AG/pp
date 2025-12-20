@@ -39,10 +39,6 @@ function Home() {
   }, []);
 
   useGSAP(() => {
-    // Disable GSAP animations on small screens (mobile)
-    if (typeof window !== "undefined" && window.matchMedia("(max-width:640px)").matches) {
-      return () => {};
-    }
 
     const ctx = gsap.context(() => {
       // Rotation animation
@@ -201,12 +197,7 @@ function Home() {
             text-[#EEE6E2] 
             mb-8 
             font-presser-bold
-            text-[24px]
-            sm:text-[28px]
-            md:text-[32px]   
-            lg:text-[34px]       
-            xl:text-[40px]       
-            2xl:text-[40px]      
+            text-[26px] sm:text-[53px] md:text-[62px] lg:text-[84px] xl:text-[94px]    
           "
         >
           CLIENT OVERVIEW
@@ -227,7 +218,7 @@ function Home() {
             <span ref={num2Ref}>0</span>
             <span>+</span>
           </div>
-          <div className="absolute bottom-[28%] sm:bottom-[26.5%] right-[10%] sm:-right-[10%] -translate-x-1/2 text-[#0a0a0a] text-center -rotate-[17deg] font-presser-bold whitespace-nowrap text-[4vw]">
+          <div className="absolute bottom-[28%] w-[50px] sm:bottom-[26.5%] right-[0%] sm:-right-[10%] -translate-x-1/2 text-[#0a0a0a] text-center -rotate-[17deg] font-presser-bold whitespace-nowrap text-[4vw]">
             <span ref={num3Ref}>0</span>
             <span>+</span>
           </div>
