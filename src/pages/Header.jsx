@@ -140,18 +140,18 @@ function Header() {
 
       {/* Mobile Nav */}
       {open && (
-<div className="md:hidden bg-yellow-300 flex items-center justify-center flex-col font-bold absolute top-0 w-screen text-black backdrop-blur-[2px] px-6 py-4 space-y-4 text-lg  text-[22px] h-screen">
+<div className="md:hidden bg-yellow-300 flex items-center justify-start pt-[120px] uppercase flex-col font-bold absolute top-0 w-screen text-black backdrop-blur-[2px] px-6 py-4 space-y-4 text-lg text-[18px] h-screen">
           <NavLink
             to="/"
             onClick={() => setOpen(false)}
-            className="block hover:text-red-400 transition"
+            className="block hover:text-red-400 active:text-red-400 transition"
           >
             Home
           </NavLink>
           <NavLink
             to="/work"
             onClick={() => setOpen(false)}
-            className="block hover:text-red-400 transition"
+            className="block hover:text-red-400 active:text-red-400 transition"
           >
             Work
           </NavLink>
@@ -159,14 +159,14 @@ function Header() {
           <NavLink
             to="/blog"
             onClick={() => setOpen(false)}
-            className="block hover:text-red-400 transition"
+            className="block hover:text-red-400 active:text-red-400 transition"
           >
             Blog
           </NavLink>
           <NavLink
             to="/contact"
             onClick={() => setOpen(false)}
-            className="block hover:text-red-400 transition"
+            className="block hover:text-red-400 active:text-red-400 transition"
           >
             Contact
           </NavLink>
