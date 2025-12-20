@@ -158,7 +158,7 @@ function Home() {
       <div className="relative inline-block sm:hidden">
         <img src={artistrebelBackground} alt="" />
         <img src={artistrebelName} alt="" className="absolute top-[-10.5%] left-[18%] h-[113%]"/>
-        <img src={artistrebelBrandidentity} alt="" className="w-[18%] absolute left-[10%] rotate-0 top-[-7%]"/>
+        <img src={artistrebelBrandidentity} alt="" className="w-[17%] absolute left-[10%] rotate-0 top-[-7%]"/>
 <img
   src={artistrebelVideoediting}
   alt=""
@@ -182,9 +182,9 @@ function Home() {
   alt=""
   className="absolute w-[14%] top-[74%] left-[16px]"
 />
-<div className="absolute right-[0] top-[84%] w-[100%] h-[38%]">
-  <img src={artistrebelproductgraph} alt="" className="w-[22%] absolute right-[2%]" />
-  <img src={artistrebelcamera} alt="" className="w-[6%] absolute right-[10%] top-[35%]" />
+<div className="absolute right-[0] top-[74%] w-[100%] h-[38%]">
+  <img src={artistrebelproductgraph} alt="" className="w-[18%] absolute right-[4%]" />
+  <img src={artistrebelcamera} alt="" className="w-[5%] absolute right-[10.5%] top-[28%]" />
 </div>
       </div>
 
