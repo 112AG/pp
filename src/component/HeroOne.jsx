@@ -112,7 +112,7 @@ function HeroOne() {
         {/* Paragraph One */}
         <p
           ref={paraOneRef}
-          className="break-normal whitespace-normal text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] w-full text-left font-maisonneue-demi leading-relaxed"
+          className="break-normal whitespace-normal text-[10px] sm:text-[16px] md:text-[18px] lg:text-[14px] w-full text-left font-maisonneue-demi leading-relaxed"
         >
           {splitText.paraOneContent}
         </p>
@@ -120,7 +120,7 @@ function HeroOne() {
         {/* Paragraph Two */}
         <p
           ref={paraTwoRef}
-          className="break-normal whitespace-normal text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] w-full font-maisonneue-demi leading-relaxed"
+          className="break-normal whitespace-normal text-[10px] sm:text-[16px] md:text-[18px] lg:text-[14px] w-full font-maisonneue-demi leading-relaxed"
         >
           {splitText.paraTwoContent}
         </p>
@@ -128,7 +128,7 @@ function HeroOne() {
         {/* CTA Link */}
         <button
           onClick={handleClick}
-          className="text-white underline px-6 py-2 rounded-[24px] transition font-maisonneue-medium bg-[#0B0B0B] whitespace-nowrap"
+          className="text-white text-[14px] sm:text-[18px] underline transition font-maisonneue-medium  whitespace-nowrap"
         >
           LET'S CONNECT →
         </button>

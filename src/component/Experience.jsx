@@ -176,13 +176,13 @@ function Experience() {
         // Adjust scroll duration and pin height based on screen size
         let endValue;
         if (isMobile) {
-          endValue = `+=${scrollDistance * 0.7}`; // Shorter scroll on mobile
+          endValue = `+=${scrollDistance * 0.64}`; // Shorter scroll on mobile
         } else if (isTablet) {
           endValue = `+=${scrollDistance * 0.85}`; // Medium scroll on tablet
         } else if (isDesktop) {
-          endValue = `+=${scrollDistance * 0.9}`; // Full scroll on desktop
+          endValue = `+=${scrollDistance * 0.85}`; // Full scroll on desktop
         } else if (isLargeDesktop) {
-          endValue = `+=${scrollDistance * 0.9}`; // Full scroll on desktop
+          endValue = `+=${scrollDistance * 0.85}`; // Full scroll on desktop
         } else {
           endValue = `+=${scrollDistance * 0.9}`; // Full scroll on desktop
         }

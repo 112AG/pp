@@ -12,10 +12,21 @@ import artist from "../assets/artistmainimage.webp";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import aritistrebelMotiongraphics from '../assets/MobileView/aritistrebel-motiongraphics.webp';
+import aritstRebelVideo from '../assets/MobileView/aritst-rebel-video.webp';
+import aritstrebelPrintdesign from '../assets/MobileView/aritstrebel-printdesign.webp';
+import artistrebelBackground from '../assets/MobileView/artistrebel-background.webp';
+import artistrebelBrandidentity from '../assets/MobileView/artistrebel-brandidentity.webp';
+import artistrebelName from '../assets/MobileView/artistrebel-name.webp';
+import artistrebelVideoediting from '../assets/MobileView/artistrebel-videoediting.webp';
+import artistrebelcamera from '../assets/MobileView/artistrebel-camera.webp';
+import artistrebelproductgraph from '../assets/MobileView/artistrebel-productgraph.webp';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
+  
   const imgRef = useRef();
   const artistref = useRef();
   const num1Ref = useRef(null);
@@ -28,6 +39,11 @@ function Home() {
   }, []);
 
   useGSAP(() => {
+    // Disable GSAP animations on small screens (mobile)
+    if (typeof window !== "undefined" && window.matchMedia("(max-width:640px)").matches) {
+      return () => {};
+    }
+
     const ctx = gsap.context(() => {
       // Rotation animation
       gsap.to(imgRef.current, {
@@ -122,8 +138,8 @@ function Home() {
     <div className="overflow-x-hidden w-full">
       <HeroOne />
 
-      <div className="relative inline-block">
-        <img src={work} alt="" loading="lazy" />
+      <div className="relative hidden sm:inline-block">
+        <img src={work} alt="" loading="lazy" className="sm:h-auto" />
         <img
           ref={imgRef}
           src={product}
@@ -136,8 +152,40 @@ function Home() {
           src={artist}
           alt=""
           loading="lazy"
-          className="absolute h-[106%] top-2 md:top-4 left-[37%]"
+          className="absolute h-[160%] sm:h-[106%] top-[-20%] sm:top-2 md:top-4 left-[31%] sm:left-[37%]"
         />
+      </div>
+      <div className="relative inline-block sm:hidden">
+        <img src={artistrebelBackground} alt="" />
+        <img src={artistrebelName} alt="" className="absolute top-[-10.5%] left-[18%] h-[113%]"/>
+        <img src={artistrebelBrandidentity} alt="" className="w-[18%] absolute left-[10%] rotate-0 top-[-7%]"/>
+<img
+  src={artistrebelVideoediting}
+  alt=""
+  className="absolute w-[16%] top-[16%] right-[28px] opacity-100 rounded-[1.84px] rotate-0"
+/>
+
+<img
+  src={aritstrebelPrintdesign}
+  alt=""
+  className="absolute w-[22%] top-[40%] right-[10px] opacity-100 rotate-0"
+/>
+
+<img
+  src={aritstRebelVideo}
+  alt=""
+  className="absolute w-[24%] top-[40%] left-[26px] opacity-100 rotate-0"
+/>
+
+<img
+  src={aritistrebelMotiongraphics}
+  alt=""
+  className="absolute w-[14%] top-[74%] left-[16px]"
+/>
+<div className="absolute right-[0] top-[84%] w-[100%] h-[38%]">
+  <img src={artistrebelproductgraph} alt="" className="w-[22%] absolute right-[2%]" />
+  <img src={artistrebelcamera} alt="" className="w-[6%] absolute right-[10%] top-[35%]" />
+</div>
       </div>
 
       <HeroTwo />

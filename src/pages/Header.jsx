@@ -11,7 +11,7 @@ function Header() {
         {/* Logo */}
         <Link
           to="/"
-          className="w-20 sm:w-26 md:w-32 lg:w-[111px] font-extrabold tracking-wide"
+          className="w-[50px] sm:w-[90px] md:w-[90px] lg:w-[111px] font-extrabold tracking-wide"
         >
           <img
             src={logo}
@@ -129,7 +129,7 @@ function Header() {
         </button> */}
         <div
           onClick={() => setOpen(!open)}
-          className="md:hidden flex flex-col items-center justify-center gap-[8px] relative"
+          className="md:hidden flex flex-col items-center justify-center gap-[8px] relative z-10"
         >
           <div className={`h-[2px] w-[22px] bg-white transition-all ease-in duration-300 rounded-full ${open? 'rotate-45':'rotate-0'}`}></div>
           <div className={`h-[2px] w-[22px] bg-white transition-all ease-in duration-300 rounded-full ${open? 'hidden':'block'}`}></div>
@@ -139,18 +139,18 @@ function Header() {
 
       {/* Mobile Nav */}
       {open && (
-<div className="md:hidden bg-black/40 backdrop-blur-[2px] px-6 py-4 space-y-4 text-lg font-semibold h-screen">
+<div className="md:hidden bg-yellow-300 flex items-center justify-center flex-col font-bold absolute top-0 w-screen text-black backdrop-blur-[2px] px-6 py-4 space-y-4 text-lg  text-[22px] h-screen">
           <NavLink
             to="/"
             onClick={() => setOpen(false)}
-            className="block hover:text-yellow-400 transition"
+            className="block hover:text-red-400 transition"
           >
             Home
           </NavLink>
           <NavLink
             to="/work"
             onClick={() => setOpen(false)}
-            className="block hover:text-yellow-400 transition"
+            className="block hover:text-red-400 transition"
           >
             Work
           </NavLink>
@@ -158,14 +158,14 @@ function Header() {
           <NavLink
             to="/blog"
             onClick={() => setOpen(false)}
-            className="block hover:text-yellow-400 transition"
+            className="block hover:text-red-400 transition"
           >
             Blog
           </NavLink>
           <NavLink
             to="/contact"
             onClick={() => setOpen(false)}
-            className="block hover:text-yellow-400 transition"
+            className="block hover:text-red-400 transition"
           >
             Contact
           </NavLink>

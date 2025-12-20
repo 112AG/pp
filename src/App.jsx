@@ -30,6 +30,7 @@ function App() {
     };
   }, []);
 
+
   return (
     <div className="bg-[#0B0B0B] text-white min-h-screen overflow-x-hidden">
       <Header/>
@@ -38,10 +39,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PageNotFound />} />
-                <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/work" element={<Work />} />
-
       </Routes>
     </div>
   );
