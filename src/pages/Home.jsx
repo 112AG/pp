@@ -234,6 +234,7 @@ function Home() {
         </div>
       </div>
 
+
       <Experience />
 
       {/* <Slide /> */}

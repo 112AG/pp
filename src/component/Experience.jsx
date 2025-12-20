@@ -14,7 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
 // Memoized experience item component
 // Memoized experience item component
 const ExperienceItem = React.memo(({ exp, index }) => (
-  <div className="relative pl-14 sm:pl-16 md:pl-20 lg:pl-24 exp-item ">
+  <div className="relative  pl-14 sm:pl-16 md:pl-20 lg:pl-24 exp-item ">
     {/* Landmark Icon */}
     <div className="absolute left-0 top-0 flex items-center justify-center w-8 sm:w-10 md:w-12 lg:w-16 flex-col">
       <img
@@ -158,14 +158,16 @@ function Experience() {
 
     mm.add(
       {
+        miniMobile: "(max-width: 299px)",
         isMobile: "(max-width: 640px)",
         isTablet: "(min-width: 641px) and (max-width: 1023px)",
         isDesktop: "(min-width: 1024px)",
         isLargeDesktop: "(min-width: 1280px)",
         isExtraLargeDesktop: "(min-width: 1536px)",
+        isUltraLargeDesktop: "(min-width: 1920px)"
       },
       (context) => {
-        const { isMobile, isTablet, isDesktop, isLargeDesktop, isExtraLargeDesktop } = context.conditions;
+        const { miniMobile, isMobile, isTablet, isDesktop, isLargeDesktop, isExtraLargeDesktop, isUltraLargeDesktop } = context.conditions;
         
         const textWidth = headRef.current.scrollWidth;
         const viewportWidth = window.innerWidth;
@@ -175,16 +177,20 @@ function Experience() {
         
         // Adjust scroll duration and pin height based on screen size
         let endValue;
-        if (isMobile) {
-          endValue = `+=${scrollDistance * 0.64}`; // Shorter scroll on mobile
+        if (miniMobile){
+          endValue = `+=${scrollDistance * 0.2}`; // Even shorter scroll on mini mobile
+        }else if (isMobile) {
+          endValue = `+=${scrollDistance * 0.6}`; // Shorter scroll on mobile
         } else if (isTablet) {
           endValue = `+=${scrollDistance * 0.85}`; // Medium scroll on tablet
         } else if (isDesktop) {
           endValue = `+=${scrollDistance * 0.85}`; // Full scroll on desktop
         } else if (isLargeDesktop) {
           endValue = `+=${scrollDistance * 0.85}`; // Full scroll on desktop
-        } else {
-          endValue = `+=${scrollDistance * 0.9}`; // Full scroll on desktop
+        } else if (isExtraLargeDesktop) {
+          endValue = `+=${scrollDistance * 0.85}`; // Full scroll on desktop
+        } else if (isUltraLargeDesktop) {
+          endValue = `+=${scrollDistance * 0.05}`; // Full scroll on desktop
         }
 
         gsap.to(headRef.current, {
@@ -232,7 +238,7 @@ function Experience() {
       </div>
 
       {/* FIXED: Responsive Scrolling Text Section */}
-      <div ref={pageRef} className='page overflow-hidden h-[50vh] sm:h-[60vh] lg:h-[70vh] flex items-center relative z-0 '>
+      <div ref={pageRef} className='page hidden sm:flex overflow-hidden h-[50vh] sm:h-[60vh] lg:h-[70vh]  items-center relative z-0 '>
         <h1 
           ref={headRef} 
           className="text-[60px] min-[400px]:text-[80px] sm:text-[100px] md:text-[140px] lg:text-[200px] xl:text-[260px] 2xl:text-[340px] whitespace-nowrap text-[#696969] font-presser-semibold"
