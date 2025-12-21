@@ -104,6 +104,11 @@ function Experience() {
   ], []);
 
   useGSAP(() => {
+    if (typeof window !== 'undefined' && window.matchMedia('(max-width: 640px)').matches) {
+      // skip animations on small devices to improve performance
+      return;
+    }
+
     const ctx = gsap.context(() => {
       gsap.utils.toArray(".exp-item").forEach((item, i) => {
         gsap.fromTo(
@@ -152,6 +157,11 @@ function Experience() {
 
   // FIXED: Responsive text scroll animation
   useGSAP(() => {
+    if (typeof window !== 'undefined' && window.matchMedia('(max-width: 640px)').matches) {
+      // no scrolling text animation for small devices
+      return;
+    }
+
     if (!headRef.current || !pageRef.current) return;
 
     const mm = gsap.matchMedia();
