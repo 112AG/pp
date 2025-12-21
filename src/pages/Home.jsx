@@ -269,6 +269,8 @@ function Home() {
             src={work2}
             alt="Background"
             loading="lazy"
+            decoding="async"
+            fetchPriority="low"
             className="object-cover object-center"
           />
           <div className="text-[#0a0a0a] text-center  absolute max-[320px]:bottom-[26.5%] max-[320px]:left-[14%] max-[2000px]:bottom-[27.5%] max-[2000px]:left-[15%] bottom-[27.5%] left-[15%] rotate-[17deg] text-[4vw] font-presser-bold">
