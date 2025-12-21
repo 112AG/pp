@@ -1,4 +1,4 @@
-import React, { useRef, useMemo } from "react";
+import React, { useRef, useMemo, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -223,6 +223,10 @@ function Experience() {
     return () => mm.revert();
   }, []);
 
+  const containertwoRef = useRef(null);
+  const linesRef = useRef([]);
+
+
   return (
     <div>
       {/* Experience Section */}
@@ -256,6 +260,22 @@ function Experience() {
           Building Brands, Designing Experiences.
         </h1>
       </div>
+
+<div
+      ref={containertwoRef}
+      className="sm:hidden flex flex-col items-center justify-center font-presser-semibold  h-[50vh] leading-[12vw] text-[10vw] text-[#696969] overflow-hidden"
+    >
+      {["Building", "Brands,", "Designing", "Experiences."].map(
+        (text, i) => (
+          <p
+            key={i}
+            ref={(el) => (linesRef.current[i] = el)}
+          >
+            {text}
+          </p>
+        )
+      )}
+    </div>
     </div>
   );
 }
