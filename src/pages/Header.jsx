@@ -132,15 +132,18 @@ function Header() {
           onClick={() => setOpen(!open)}
           className="md:hidden flex flex-col items-center justify-center gap-[8px] relative z-10"
         >
-          <div className={`h-[2px] w-[22px] bg-white transition-all ease-in duration-300 rounded-full ${open? 'rotate-45':'rotate-0'}`}></div>
-          <div className={`h-[2px] w-[22px] bg-white transition-all ease-in duration-300 rounded-full ${open? 'hidden':'block'}`}></div>
-          <div className={`h-[2px] w-[22px] bg-white transition-all ease-in duration-300 absolute rounded-full ${open? '-rotate-45 bottom-0':'rotate-0'}`}></div>
+          <div className={`h-[2px] w-[22px] bg-white transition-all ease-in duration-100 rounded-full ${open? 'rotate-45':'rotate-0'}`}></div>
+          <div className={`h-[2px] w-[22px] bg-white transition-all ease-in duration-100 rounded-full ${open? 'hidden':'block'}`}></div>
+          <div className={`h-[2px] w-[22px] bg-white transition-all ease-in duration-100 absolute rounded-full ${open? '-rotate-45 bottom-0':'rotate-0'}`}></div>
         </div>
       </div>
+                
 
-      {/* Mobile Nav */}
-      {open && (
-<div className="md:hidden bg-yellow-300 flex items-center justify-start pt-[120px] uppercase flex-col font-bold absolute top-0 w-screen text-black backdrop-blur-[2px] px-6 py-4 space-y-4 text-lg text-[18px] h-screen">
+      {/* Mobile Nav (always rendered; visibility & transitions controlled by classes) */}
+      <div
+        className={`md:hidden bg-yellow-300 flex items-center justify-start pt-[120px] uppercase flex-col font-bold absolute top-0 w-screen text-black backdrop-blur-[2px] px-6 py-4 space-y-4 text-lg text-[18px] h-screen transform transition-transform transition-opacity duration-500 ease-out ${open ? 'translate-y-0 opacity-100 pointer-events-auto' : '-translate-y-12 opacity-0 pointer-events-none'}`}
+        aria-hidden={!open}
+      >
           <NavLink
             to="/"
             onClick={() => setOpen(false)}
@@ -171,7 +174,6 @@ function Header() {
             Contact
           </NavLink>
         </div>
-      )}
       <style jsx>{`
   .nav-gradient-blur {
     background: rgba(0, 0, 0, 0);

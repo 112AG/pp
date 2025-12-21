@@ -152,36 +152,97 @@ function Home() {
         />
       </div>
       <div className="relative inline-block sm:hidden">
-        <img src={artistrebelBackground} alt="" />
-        <img src={artistrebelName} alt="" className="absolute top-[-10.5%] left-[18%] h-[113%]"/>
-        <img src={artistrebelBrandidentity} alt="" className="w-[17%] absolute left-[10%] rotate-0 top-[-7%]"/>
-<img
-  src={artistrebelVideoediting}
-  alt=""
-  className="absolute w-[16%] top-[16%] right-[28px] opacity-100 rounded-[1.84px] rotate-0"
-/>
+        {/* Main background: provide loading hints and async decoding */}
+        <img
+          src={artistrebelBackground}
+          alt="Artist Rebel background"
+          loading="lazy"
+          decoding="async"
+          fetchPriority="low"
+          className="w-full h-auto block"
+        />
 
-<img
-  src={aritstrebelPrintdesign}
-  alt=""
-  className="absolute w-[22%] top-[40%] right-[10px] opacity-100 rotate-0"
-/>
+        {/* Branding name - meaningful alt, keep readable for assistive tech */}
+        <img
+          src={artistrebelName}
+          alt="Artist Rebel"
+          loading="lazy"
+          decoding="async"
+          fetchPriority="low"
+          className="absolute top-[-10.5%] left-[18%] h-[113%] pointer-events-none select-none"
+        />
 
-<img
-  src={aritstRebelVideo}
-  alt=""
-  className="absolute w-[24%] top-[40%] left-[26px] opacity-100 rotate-0"
-/>
+        {/* Decorative overlays: mark as presentation so they don't get read by screen readers */}
+        <img
+          src={artistrebelBrandidentity}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          fetchPriority="low"
+          className="w-[17%] absolute left-[10%] rotate-0 top-[-7%] pointer-events-none"
+        />
 
-<img
-  src={aritistrebelMotiongraphics}
-  alt=""
-  className="absolute w-[14%] top-[74%] left-[16px]"
-/>
-<div className="absolute right-[0] top-[74%] w-[100%] h-[38%]">
-  <img src={artistrebelproductgraph} alt="" className="w-[18%] absolute right-[4%]" />
-  <img src={artistrebelcamera} alt="" className="w-[5%] absolute right-[10.5%] top-[28%]" />
-</div>
+        <img
+          src={artistrebelVideoediting}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          fetchPriority="low"
+          className="absolute w-[16%] top-[16%] right-[28px] opacity-100 rounded-[1.84px] rotate-0 pointer-events-none"
+        />
+
+        <img
+          src={aritstrebelPrintdesign}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          fetchPriority="low"
+          className="absolute w-[22%] top-[40%] right-[10px] opacity-100 rotate-0 pointer-events-none"
+        />
+
+        <img
+          src={aritstRebelVideo}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          fetchPriority="low"
+          className="absolute w-[24%] top-[40%] left-[26px] opacity-100 rotate-0 pointer-events-none"
+        />
+
+        <img
+          src={aritistrebelMotiongraphics}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          fetchPriority="low"
+          className="absolute w-[14%] top-[74%] left-[16px] pointer-events-none"
+        />
+
+        <div className="absolute right-[0] top-[74%] w-[100%] h-[38%] pointer-events-none">
+          <img
+            src={artistrebelproductgraph}
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            className="w-[18%] absolute right-[4%]"
+          />
+          <img
+            src={artistrebelcamera}
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            className="w-[5%] absolute right-[10.5%] top-[28%]"
+          />
+        </div>
       </div>
 
       <HeroTwo />
@@ -218,7 +279,7 @@ function Home() {
             <span ref={num2Ref}>0</span>
             <span>+</span>
           </div>
-          <div className="absolute bottom-[28%] w-[50px] sm:bottom-[26.5%] right-[0%] sm:-right-[10%] -translate-x-1/2 text-[#0a0a0a] text-center -rotate-[17deg] font-presser-bold whitespace-nowrap text-[4vw]">
+          <div className="absolute w-[50px] sm:w-auto bottom-[28%] sm:bottom-[26.5%] max-[346px]:right-[-2%] max-[383px]:right-[2%] max-[400px]:right-[3%] max-[453px]:right-[5%] max-[499px]:right-[8%] max-[560px]:right-[10%] max-[639px]:right-[12%] sm:-right-[0%] -translate-x-1/2 text-[#0a0a0a] text-center -rotate-[17deg] font-presser-bold whitespace-nowrap text-[4vw]">
             <span ref={num3Ref}>0</span>
             <span>+</span>
           </div>
