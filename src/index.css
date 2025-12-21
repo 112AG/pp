@@ -276,13 +276,15 @@ body {
   
 }
 
-.contact-bg {
-  background-image: url('./assets/contact/artistrebelbackground.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
+@media (min-width: 640px) {
+  .contact-bg {
+    background-image: url('./assets/contact/artistrebelbackground.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
+
 
 /*  */
 html,
@@ -301,4 +303,20 @@ html.lenis {
 
 .lenis.lenis-stopped {
   overflow: hidden;
+}
+
+/* Contact form helpers to better match the design */
+.contact-form-input {
+  
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.02);
+}
+
+.contact-submit {
+  box-shadow: 0 6px 0 #0B0E14;
+  transition: transform 0.2s ease;
+}
+
+.contact-submit:hover {
+  transform: scale(1.03);
 }

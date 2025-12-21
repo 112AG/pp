@@ -5,108 +5,94 @@ import email from "../assets/contact/artistrebelgmail.webp";
 import location from "../assets/contact/artistrebelahemdabad.webp";
 import tag from "../assets/contact/artistrebeltag.webp";
 import { Link } from "react-router-dom";
-import bg from "../assets/contact/artistrebelbackground.png";
-
+import artistrebeBackground from "../assets/MobileView/artistrebel-contactbackground.webp"
+import layer from "../assets/MobileView/artistrebel-contactlayer.webp";
 function Contact() {
   return (
     <div className="h-full flex flex-col gap-12 sm:gap-24">
-      <div className="contact-bg pt-[74px] xl:pt-[140px] min-h-[105vh] sm:min-h-[1249px] xl:min-h-[1680px]">
-        <div className="z-[40] w-full flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 xl:px-20 py-10">
+        <img src={artistrebeBackground} alt="" className="max-[320px]:h-[320px] h-full absolute" />
+        <img src={layer} alt="" className="absolute h-[123px] -bottom-17 left-1/2 -translate-x-1/2" />
+      <div className="contact-bg z-30 pt-[74px] xl:pt-[140px] min-h-[105vh] sm:min-h-[1249px] xl:min-h-[1680px] rounded-b-[56px] overflow-hidden">
+        <div className="z-[40] w-full flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 xl:px-20 py-0">
           {/* Heading */}
-          <h1 className="text-[28px] sm:text-[64px] xl:text-[84px] font-presser-bold font-extrabold text-black uppercase text-center leading-tight">
+          <h1 className="text-[24px] sm:text-[64px] xl:text-[84px] font-presser-bold font-extrabold text-black uppercase text-center leading-tight">
             Contact Us
           </h1>
-          <p className="text-[12px] sm:text-xl 2xl:text-[28px] font-presser-bold font-bold text-black text-center sm:mb-10">
+          <p className="max-[340px]:text-[10px] text-[12px] sm:text-xl 2xl:text-[28px] font-presser-bold font-bold text-black text-center sm:mb-10">
             Ready to Make Your Brand Stand Out?
           </p>
 
-          {/* Form */}
-          <form className="w-full max-w-4xl grid grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-6">
+          {/* Form (single-column, centered to match design) */}
+          <form className="w-full max-w-[360px] mx-auto flex flex-col gap-2 mt-4 px-4">
             {/* Name */}
             <div>
-              <label className="block text-[10px] sm:text-sm xl:text-[20px] text-[#131B23] font-semibold mb-1 sm:mb-2">
-                Name
-              </label>
+              <label className="block text-[10px] text-[#131B23] font-bold mb-1">Name</label>
               <input
                 type="text"
                 placeholder="Your Full Name"
-                className="w-full px-2 sm:px-4 xl:px-8 xl:py-6 py-1.5 sm:py-3 rounded-md bg-[#131B23] text-white placeholder-gray-400 placeholder:text-[12px] focus:outline-none"
-              />
-            </div>
-
-            {/* Service */}
-            <div>
-              <label className="block text-[10px] sm:text-sm xl:text-[20px] text-[#131B23] font-semibold mb-1 sm:mb-2">
-                Service
-              </label>
-              <input
-                type="text"
-                placeholder="What do you need help with?"
-                className="w-full px-2 sm:px-4 xl:px-8 xl:py-6 py-1.5 sm:py-3 rounded-[6px] bg-[#131B23] text-white placeholder-gray-400 placeholder:text-[12px] focus:outline-none"
+                className="w-full placeholder:text-[10px] h-[30px] text-sm px-3 rounded-[2px] bg-[#131B23] text-white placeholder-gray-400 focus:outline-none contact-form-input"
               />
             </div>
 
             {/* Email */}
             <div>
-              <label className="block text-[10px] sm:text-sm xl:text-[20px] text-[#131B23] font-semibold mb-1 sm:mb-2">
-                Email
-              </label>
+              <label className="block text-[10px] text-[#131B23] font-bold mb-1">Email</label>
               <input
                 type="email"
                 placeholder="Your Email Address"
-                className="w-full px-2 sm:px-4  xl:px-8 xl:py-6 py-1.5 sm:py-3 rounded-[6px] bg-[#131B23] text-white placeholder-gray-400 placeholder:text-[12px] focus:outline-none"
-              />
-            </div>
-
-            {/* Budget */}
-            <div>
-              <label className="block text-[10px] sm:text-sm xl:text-[20px] text-[#131B23] font-semibold mb-1 sm:mb-2">
-                Budget
-              </label>
-              <input
-                type="text"
-                placeholder="Estimated Budget"
-                className="w-full px-2 sm:px-4 xl:px-8 xl:py-6 py-1.5 sm:py-3 rounded-[6px] bg-[#131B23] text-white placeholder-gray-400 placeholder:text-[12px] focus:outline-none"
+                className="w-full placeholder:text-[10px] h-[30px] text-sm px-3 rounded-sm bg-[#131B23] text-white placeholder-gray-400 focus:outline-none contact-form-input"
               />
             </div>
 
             {/* Phone */}
             <div>
-<label className="block text-[10px] sm:text-sm xl:text-[20px] text-[#131B23] whitespace-nowrap font-semibold mb-1 sm:mb-2">
-  Phone Number <span className="sm:inline">(WhatsApp preferred):</span>
-</label>
-
+              <label className="block text-[10px] text-[#131B23] font-bold mb-1">Phone Number (WhatsApp preferred)</label>
               <input
                 type="tel"
                 placeholder="+91"
-                className="w-full px-2 sm:px-4 xl:px-8 xl:py-6 py-1.5 sm:py-3 rounded-[6px] bg-[#131B23] text-white placeholder-gray-400 placeholder:text-[12px] focus:outline-none"
+                className="w-full placeholder:text-[10px] h-[30px] text-sm px-3 rounded-sm bg-[#131B23] text-white placeholder-gray-400 focus:outline-none contact-form-input"
               />
             </div>
 
-            {/* Message */}
+            {/* Service */}
             <div>
-              <label className="block text-[10px] sm:text-sm xl:text-[20px] text-[#131B23] font-semibold mb-1 sm:mb-2">
-                Message
-              </label>
+              <label className="block text-[10px] text-[#131B23] font-bold mb-1">Service</label>
               <input
                 type="text"
-                placeholder="Tell me about your project"
-                className="w-full px-2 sm:px-4 xl:px-8 xl:py-6 py-1.5 sm:py-3 rounded-[6px] bg-[#131B23] text-white placeholder-gray-400 placeholder:text-[12px] focus:outline-none"
+                placeholder="What do you need help with?"
+                className="w-full placeholder:text-[10px] h-[30px] text-sm px-3 rounded-sm bg-[#131B23] text-white placeholder-gray-400 focus:outline-none contact-form-input"
               />
             </div>
-          </form>
 
-          {/* Submit Button */}
-          <div className="mt-4 sm:mt-10 2xl:scale-140">
-            <button
-              type="submit"
-              className="px-7 sm:px-12 font-presser-bold py-2.5 sm:py-4 bg-[#EE3C4B] text-white font-bold text-[12px] sm:text-lg rounded-[6px] 
-               hover:scale-105 transition-transform duration-300
-               shadow-[0_6px_0_#0B0E14]"
-            >
-              Let’s Connect
-            </button>
-          </div>
+            {/* Budget */}
+            <div>
+              <label className="block text-[10px] text-[#131B23] font-bold mb-1">Budget</label>
+              <input
+                type="text"
+                placeholder="Estimated Budget"
+                className="w-full placeholder:text-[10px] h-[30px] text-sm px-3 rounded-sm bg-[#131B23] text-white placeholder-gray-400 focus:outline-none contact-form-input"
+              />
+            </div>
+
+            {/* Message (textarea) */}
+            <div>
+              <label className="block text-[10px] text-[#131B23] font-bold mb-1">Message</label>
+              <textarea
+                placeholder="Tell me about your project"
+                className="w-full placeholder:text-[10px] h-[30px] text-sm px-3 py-2 rounded-sm bg-[#131B23] text-white placeholder-gray-400 focus:outline-none resize-none contact-form-input"
+              />
+            </div>
+
+            {/* Submit Button (full-width) */}
+            <div className="mt-2">
+              <button
+                type="submit"
+                className="w-full h-[30px] sm:h-12 bg-[#EE3C4B] text-white font-bold text-[15px] contact-submit"
+              >
+                <span className=" bg-[#EE3C4B] w-full h-full flex items-center justify-center tracking-wider">Let's Connect</span>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
 
