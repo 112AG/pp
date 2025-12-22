@@ -276,15 +276,47 @@ body {
   
 }
 
+/* Mobile background - visible only on small screens */
+.contact-bg {
+  background-image: url('./assets/MobileView/artistrebel-contactbackground.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Large screen background - visible only on sm and above */
+.contact-bg-two {
+  background-image: url('./assets/MobileView/artistrebel-contactbackground.webp');
+  background-size: 99% 80%; /* Stretch to fit exactly */
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: none; /* Hidden on mobile */
+}
+
+/* Show only on small screens and up */
 @media (min-width: 640px) {
   .contact-bg {
-    background-image: url('./assets/contact/artistrebelbackground.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    display: none; /* Hide mobile version on larger screens */
+  }
+  
+  .contact-bg-two {
+    display: block; /* Show desktop version */
   }
 }
 
+/* Form input styling for consistent appearance */
+.contact-form-input {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-submit {
+  border-radius: 2px;
+  transition: transform 0.2s ease;
+}
+
+.contact-submit:active {
+  transform: scale(0.98);
+}
 
 /*  */
 html,
