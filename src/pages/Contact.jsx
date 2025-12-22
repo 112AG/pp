@@ -10,7 +10,7 @@ import layer from "../assets/MobileView/artistrebel-contactlayer.webp";
 function Contact() {
   return (
     <div className="h-full flex flex-col gap-12 sm:gap-24">
-        <img src={artistrebeBackground} alt="" className="max-[320px]:h-[320px] h-full absolute" />
+        <img src={artistrebeBackground} alt="" className="h-full absolute" />
         <img src={layer} alt="" className="absolute h-[123px] -bottom-17 left-1/2 -translate-x-1/2" />
       <div className="contact-bg z-30 pt-[74px] xl:pt-[140px] min-h-[105vh] sm:min-h-[1249px] xl:min-h-[1680px] rounded-b-[56px] overflow-hidden">
         <div className="z-[40] w-full flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 xl:px-20 py-0">
