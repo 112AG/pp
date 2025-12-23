@@ -11,7 +11,7 @@ function Contact() {
   return (
     <div className="h-full flex flex-col gap-12 sm:gap-24">
       {/* MOBILE DEVICES ONLY */}
-      <div className="contact-bg sm:hidden relative z-30 pt-[65px] min-h-[130vh] rounded-b-[56px]">
+      <div className="contact-bg sm:hidden relative z-30 pt-[65px] max-[321px]:h-[60vh] max-[641px]:h-[60vh] rounded-b-[56px]">
         <div className="w-full h-[125px] flex items-center justify-center absolute -bottom-16 -z-30">
           <img src={layer} alt="" className="h-[123px]" />
         </div>
