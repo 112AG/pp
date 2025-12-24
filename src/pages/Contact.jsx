@@ -113,8 +113,8 @@ function Contact() {
       </div>
 
       {/* LARGE SCREEN ONLY */}
-      <div className="contact-bg-two hidden sm:block relative z-30 pt-[74px] xl:pt-[140px] sm:min-h-[120vh]">
-        <div className="w-full h-[330px] flex items-center justify-center absolute bottom-[0%] z-[-40]">
+      <div className="contact-bg-two hidden sm:block relative z-30 pt-[74px] xl:pt-[140px] min-h-[140vh] xl:min-h-[170vh]">
+        <div className="w-full h-[330px] flex items-center justify-center absolute bottom-[10%] xl:bottom-[8.5%] z-[-40]">
           <img src={layer} alt="" className="h-full " />
         </div>
         <div className="z-[40] w-full flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 xl:px-20 py-10">
