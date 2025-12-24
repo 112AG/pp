@@ -218,14 +218,14 @@ function Contact() {
       <div className="relative">
         <a
           href="tel:+911234567890"
-          className="w-[36%] sm:w-[26%] lg:w-[30%] 2xl:w-[40%] max-w-[436px] absolute top-38 min-[400px]:top-46 -rotate-36 sm:rotate-0 sm:-top-88 left-[8%]"
+          className="w-[36%] sm:w-[26%] lg:w-[30%] 2xl:w-[40%] max-w-[436px] absolute top-38 min-[400px]:top-46 -rotate-36 sm:rotate-0 sm:-top-78 left-[8%]"
         >
           <img src={number} alt="Call us" />
         </a>
 
         <a
           href="mailto:artistrebel10@gmail.com"
-          className="w-[40%] sm:w-[26%] lg:w-[30%] 2xl:w-[40%] max-w-[557px] absolute right-18 sm:right-14 -rotate-12 sm:rotate-0 top-[62%] sm:-top-48"
+          className="w-[40%] sm:w-[26%] lg:w-[30%] 2xl:w-[40%] max-w-[557px] absolute right-14 sm:right-14 -rotate-12 sm:rotate-0 top-[62%] sm:-top-48"
         >
           <img src={email} alt="Email us" />
         </a>
