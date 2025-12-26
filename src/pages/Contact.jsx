@@ -11,7 +11,7 @@ function Contact() {
   return (
     <div className="h-full flex flex-col gap-12 sm:gap-24">
       {/* MOBILE DEVICES ONLY */}
-      <div className="contact-bg sm:hidden relative z-30 pt-[65px] max-[321px]:h-[90vh] max-[641px]:h-[70vh] rounded-b-[56px]">
+      <div className="contact-bg sm:hidden relative z-30 pt-[65px] max-[321px]:h-[90vh] max-[641px]:h-[620px] rounded-b-[56px]">
         <div className="w-full h-[125px] flex items-center justify-center absolute -bottom-16 -z-30">
           <img src={layer} alt="" className="h-[123px]" />
         </div>
@@ -113,7 +113,7 @@ function Contact() {
       </div>
 
       {/* LARGE SCREEN ONLY */}
-      <div className="contact-bg-two hidden sm:block relative z-30 pt-[74px] xl:pt-[140px] min-h-[140vh] xl:min-h-[170vh]">
+      <div className="contact-bg-two hidden sm:block relative z-30 pt-[74px] xl:pt-[140px] min-h-[1200px] xl:min-h-[1400px]">
         <div className="w-full h-[330px] flex items-center justify-center absolute bottom-[10%] xl:bottom-[8.5%] z-[-40]">
           <img src={layer} alt="" className="h-full " />
         </div>
