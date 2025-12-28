@@ -9,9 +9,9 @@ import layer from "../assets/MobileView/artistrebel-contactlayer.webp";
 
 function Contact() {
   return (
-    <div className="h-full flex flex-col gap-12 sm:gap-24">
+    <div className="h-full flex flex-col gap-12 sm:gap-0">
       {/* MOBILE DEVICES ONLY */}
-      <div className="contact-bg sm:hidden relative z-30 pt-[65px] max-[321px]:h-[90vh] max-[641px]:h-[620px] rounded-b-[56px]">
+      <div className="contact-bg sm:hidden relative z-30 pt-[65px] max-[274px]:h-[620px] max-[320px]:h-[570px] max-[641px]:h-[580px] rounded-b-[56px]">
         <div className="w-full h-[125px] flex items-center justify-center absolute -bottom-16 -z-30">
           <img src={layer} alt="" className="h-[123px]" />
         </div>
@@ -93,7 +93,8 @@ function Contact() {
               </label>
               <textarea
                 placeholder="Tell me about your project"
-                className="w-full placeholder:text-[10px] h-[30px] text-sm px-3 py-2 rounded-sm bg-[#131B23] text-white placeholder-gray-400 focus:outline-none resize-none contact-form-input"
+                rows={2}
+                className="w-full placeholder:text-[10px] text-sm px-3 py-2 rounded-sm bg-[#131B23] text-white placeholder-gray-400 focus:outline-none resize-none contact-form-input"
               />
             </div>
 
@@ -114,7 +115,7 @@ function Contact() {
 
       {/* LARGE SCREEN ONLY */}
       <div className="contact-bg-two hidden sm:block relative z-30 pt-[74px] xl:pt-[140px] min-h-[1200px] xl:min-h-[1400px]">
-        <div className="w-full h-[330px] flex items-center justify-center absolute bottom-[10%] xl:bottom-[8.5%] z-[-40]">
+        <div className="w-full h-[330px] lg:h-[450px] flex items-center justify-center absolute bottom-[6%] lg:bottom-[1%] xl:bottom-[4%] z-[-40]">
           <img src={layer} alt="" className="h-full " />
         </div>
         <div className="z-[40] w-full flex flex-col items-center justify-center px-4 sm:px-8 lg:px-16 xl:px-20 py-10">
@@ -218,14 +219,14 @@ function Contact() {
       <div className="relative">
         <a
           href="tel:+911234567890"
-          className="w-[36%] sm:w-[26%] lg:w-[30%] 2xl:w-[40%] max-w-[436px] absolute top-38 min-[400px]:top-46 -rotate-36 sm:rotate-0 sm:-top-78 left-[8%]"
+          className="w-[32%] sm:w-[26%]  2xl:w-[40%] max-w-[436px] absolute top-3 rotate-0 sm:-top-28 left-[2%]"
         >
           <img src={number} alt="Call us" />
         </a>
 
         <a
           href="mailto:artistrebel10@gmail.com"
-          className="w-[40%] sm:w-[26%] lg:w-[30%] 2xl:w-[40%] max-w-[557px] absolute right-14 sm:right-14 -rotate-12 sm:rotate-0 top-[62%] sm:-top-48"
+          className="w-[38%] sm:w-[26%] 2xl:w-[40%] max-w-[557px] absolute right-2 sm:right-14 rotate-0 top-12 sm:-top-18"
         >
           <img src={email} alt="Email us" />
         </a>
@@ -234,17 +235,17 @@ function Contact() {
           href="https://goo.gl/maps/yourLocationLink"
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute right-[32%] translate-x-1/2 -bottom-10 sm:bottom-0 w-[38%] sm:w-[28%] lg:w-[20%] 2xl:w-[40%] max-w-[340px]"
+          className="absolute right-[32%] translate-x-1/2 -bottom-18 sm:-bottom-1 md:-bottom-12 w-[38%] sm:w-[28%] 2xl:w-[40%] max-w-[440px]"
         >
           <img src={location} alt="Location" className="w-full h-auto" />
         </a>
 
-        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl mt-4 xl:text-9xl text-center font-presser-bold">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl mt-4 xl:text-9xl text-center font-presser-bold pt-[94px]">
           Thank You
         </h1>
 
-        <div className="w-full max-[400px]:h-[24vh] max-[500px]:h-[28vh] h-[38vh] sm:h-[36vh] md:h-[28vh] lg:h-[38vh]">
-          <div className="w-[70%] sm:w-[50%] lg:w-[40%] max-w-[460px] absolute left-1/2 -translate-x-1/2">
+        <div className="w-full max-[400px]:h-[8vh] max-[500px]:h-[14vh] h-[18vh] sm:h-[36vh] md:h-[28vh] lg:h-[38vh]">
+          <div className="w-[202px] sm:w-[50%] lg:w-[40%] max-w-[460px] absolute left-1/2 -translate-x-1/2">
             <img src={tag} alt="" />
           </div>
         </div>

@@ -12,15 +12,16 @@ import varanasiArtist from "../assets/cities/varanasiArtist.png";
 gsap.registerPlugin(ScrollTrigger);
 
 // Memoized experience item component
+// Memoized experience item component
 const ExperienceItem = React.memo(({ exp, index }) => (
-  <div className="relative pl-14 sm:pl-16 md:pl-20 lg:pl-24 exp-item">
+  <div className="relative  pl-14 sm:pl-16 md:pl-20 lg:pl-24 exp-item ">
     {/* Landmark Icon */}
     <div className="absolute left-0 top-0 flex items-center justify-center w-8 sm:w-10 md:w-12 lg:w-16 flex-col">
       <img
         src={exp.icon}
         alt={exp.location}
         className="h-8 sm:h-10 md:h-12 lg:h-16 xl:h-20 object-contain"
-        loading="eager"
+        loading="lazy"
       />
     </div>
 
@@ -56,7 +57,6 @@ function Experience() {
   const containerRef = useRef(null);
   const headRef = useRef(null);
   const pageRef = useRef(null);
-  const animationsInitialized = useRef(false);
 
   const experiences = useMemo(() => [
     {
@@ -103,60 +103,11 @@ function Experience() {
     { top: "70%" },
   ], []);
 
-  // Wait for all assets to load before initializing animations
-  useEffect(() => {
-    const initializeAfterLoad = async () => {
-      try {
-        // Wait for fonts to load
-        await document.fonts.ready;
-        
-        // Wait for images to load
-        if (containerRef.current) {
-          const images = containerRef.current.querySelectorAll('img');
-          await Promise.all(
-            Array.from(images).map(img => {
-              if (img.complete) return Promise.resolve();
-              return new Promise((resolve) => {
-                img.addEventListener('load', resolve, { once: true });
-                img.addEventListener('error', resolve, { once: true });
-              });
-            })
-          );
-        }
-        
-        // Small delay for layout stabilization
-        await new Promise(resolve => setTimeout(resolve, 150));
-        
-        // Mark as ready for animations
-        animationsInitialized.current = true;
-        
-        // Refresh ScrollTrigger
-        ScrollTrigger.refresh();
-      } catch (error) {
-        console.error('Error loading assets:', error);
-        animationsInitialized.current = true;
-        ScrollTrigger.refresh();
-      }
-    };
-
-    initializeAfterLoad();
-
-    // Also refresh on window resize
-    const handleResize = () => {
-      ScrollTrigger.refresh();
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  // Experience items and timeline animations
   useGSAP(() => {
     if (typeof window !== 'undefined' && window.matchMedia('(max-width: 640px)').matches) {
+      // skip animations on small devices to improve performance
       return;
     }
-
-    if (!animationsInitialized.current) return;
 
     const ctx = gsap.context(() => {
       gsap.utils.toArray(".exp-item").forEach((item, i) => {
@@ -202,15 +153,16 @@ function Experience() {
     }, containerRef);
 
     return () => ctx.revert();
-  }, [animationsInitialized.current]);
+  }, []);
 
-  // Scrolling text animation
+  // FIXED: Responsive text scroll animation
   useGSAP(() => {
     if (typeof window !== 'undefined' && window.matchMedia('(max-width: 640px)').matches) {
+      // no scrolling text animation for small devices
       return;
     }
 
-    if (!headRef.current || !pageRef.current || !animationsInitialized.current) return;
+    if (!headRef.current || !pageRef.current) return;
 
     const mm = gsap.matchMedia();
 
@@ -229,23 +181,26 @@ function Experience() {
         
         const textWidth = headRef.current.scrollWidth;
         const viewportWidth = window.innerWidth;
+        
+        // Calculate proper scroll distance based on screen size
         const scrollDistance = textWidth + viewportWidth;
         
+        // Adjust scroll duration and pin height based on screen size
         let endValue;
-        if (miniMobile) {
-          endValue = `+=${scrollDistance * 0.2}`;
-        } else if (isMobile) {
-          endValue = `+=${scrollDistance * 0.6}`;
+        if (miniMobile){
+          endValue = `+=${scrollDistance * 0.2}`; // Even shorter scroll on mini mobile
+        }else if (isMobile) {
+          endValue = `+=${scrollDistance * 0.6}`; // Shorter scroll on mobile
         } else if (isTablet) {
-          endValue = `+=${scrollDistance * 0.85}`;
+          endValue = `+=${scrollDistance * 0.85}`; // Medium scroll on tablet
         } else if (isDesktop) {
-          endValue = `+=${scrollDistance * 0.85}`;
+          endValue = `+=${scrollDistance * 0.85}`; // Full scroll on desktop
         } else if (isLargeDesktop) {
-          endValue = `+=${scrollDistance * 0.85}`;
+          endValue = `+=${scrollDistance * 0.85}`; // Full scroll on desktop
         } else if (isExtraLargeDesktop) {
-          endValue = `+=${scrollDistance * 0.85}`;
+          endValue = `+=${scrollDistance * 0.85}`; // Full scroll on desktop
         } else if (isUltraLargeDesktop) {
-          endValue = `+=${scrollDistance * 0.05}`;
+          endValue = `+=${scrollDistance * 0.05}`; // Full scroll on desktop
         }
 
         gsap.to(headRef.current, {
@@ -266,12 +221,13 @@ function Experience() {
     );
 
     return () => mm.revert();
-  }, [animationsInitialized.current]);
+  }, []);
+
 
   return (
     <div>
       {/* Experience Section */}
-      <div ref={containerRef} className="three mt-12 py-12 relative z-20">
+      <div ref={containerRef} className="three mt-12 py-12 relative z-10">
         <h1
           className="text-center font-extrabold leading-tight text-[26px] sm:text-[53px] md:text-[62px] lg:text-[84px] xl:text-[94px] text-[#EEE6E2] mb-8 tracking-wide px-4 font-presser-bold"
           style={{ letterSpacing: "0.04em" }}
@@ -292,8 +248,8 @@ function Experience() {
         </div>
       </div>
 
-      {/* Scrolling Text Section */}
-      <div ref={pageRef} className='page hidden sm:flex overflow-hidden h-[50vh] sm:h-[60vh] lg:h-[70vh] items-center relative z-10'>
+      {/* FIXED: Responsive Scrolling Text Section */}
+      <div ref={pageRef} className='page hidden sm:flex overflow-hidden h-[50vh] sm:h-[60vh] lg:h-[70vh]  items-center relative z-0 '>
         <h1 
           ref={headRef} 
           className="text-[60px] min-[400px]:text-[80px] sm:text-[100px] md:text-[140px] lg:text-[200px] xl:text-[260px] 2xl:text-[340px] whitespace-nowrap text-[#696969] font-presser-semibold"
@@ -306,6 +262,7 @@ function Experience() {
 }
 
 export default Experience;
+
 // // Memoized experience item component
 // const ExperienceItem = React.memo(({ exp, index }) => (
 //   <div className="relative pl-14 sm:pl-16 md:pl-20 lg:pl-24 exp-item">
