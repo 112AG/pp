@@ -54,21 +54,27 @@ function Blog() {
 
     <div className='flex items-center justify-center gap-[112px] min-h-[900px]'>
       {/* card one */}
-      <div className='border-y-amber-400 w-[714px] h-[591px] bg-red-100 rounded-[38px] overflow-hidden'>
-        <div className='h-[459px] bg-teal-800 relative p-8'>
+      <div className='border-none w-[714px] h-[591px] bg-red-100 rounded-[38px] overflow-hidden' style={{boxShadow: '0 30px 60px rgba(0,0,0,0.6), 0 0 40px rgba(245,197,24,0.22), 0 0 120px rgba(245,197,24,0.08)'}}>
+        <div className='h-[459px] bg-teal-800 relative px-12 pt-12'>
           <div className='bg-red-500 text-white font-bold rounded-[4px] h-[40px] w-[120px] text-center flex items-center justify-center'>FEATURED</div>
-          <div className='absolute bottom-0'>
+          <div className='absolute bottom-3'>
             <p className='text-[#F5C518] font-bold'>OCT 24, 2023</p>
             <p className='font-presser-bold text-[32px] leading-tight whitespace-wrap'>WHY MINIMALIST DESIGN <br /> IS BORING</p>
           </div>
         </div>
-        <div className='h-[132px] w-full bg-amber-900'></div>
-        <div></div>
+        <div className='h-[132px] w-full bg-[#121912] px-12 py-2.5'>
+          <p className='text-[#7A8A9E] font-maisonneue-demi pb-2'>We've polished the soul out of the internet. it's time to bring back texture, chaos, and personality to out...</p>
+          <hr className='mb-2.5'/>
+          <div className='flex items-center justify-between'>
+            <div className='rounded-full bg-[#1A2230] text-[#4A5A6A] px-4 p-1 text-[12px] font-bold'>OPINION</div>
+            <div className='h-[40px] w-[40px] bg-[#F5C518] rounded-full'><i class="ri-arrow-right-up-line text-black"></i></div>
+          </div>
+        </div>
       </div>
 
       {/* card two */}
    
-      <div className='border-y-amber-400 w-[714px] h-[591px] bg-red-100 rounded-[38px] overflow-hidden'>
+      <div className='border-y-amber-400 w-[714px] h-[591px] bg-red-100 rounded-[38px] overflow-hidden' style={{boxShadow: '0 30px 60px rgba(30,10,2,0.8), 0 0 40px rgba(255,80,60,0.22), 0 0 120px rgba(255,80,60,0.08)'}}>
         <div className='h-[459px] bg-teal-800 relative p-8'>
           <div className='bg-red-500 text-white font-bold rounded-[4px] h-[40px] w-[120px] text-center flex items-center justify-center'>PROCESS</div>
           <div className='absolute bottom-0'>
@@ -76,7 +82,7 @@ function Blog() {
             <p className='font-presser-bold text-[32px] leading-tight whitespace-wrap'>MASTERING THE ART <br /> OF CREATIVE CHAOS</p>
           </div>
         </div>
-        <div className='h-[132px] w-full bg-amber-900'></div>
+        <div className='h-[132px] w-full bg-[#121912]'></div>
         <div></div>
       </div>
     </div>
