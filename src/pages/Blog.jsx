@@ -53,14 +53,32 @@ function Blog() {
     </div>
 
     <div className='flex items-center justify-center gap-[112px] min-h-[900px]'>
-
+      {/* card one */}
       <div className='border-y-amber-400 w-[714px] h-[591px] bg-red-100 rounded-[38px] overflow-hidden'>
-
+        <div className='h-[459px] bg-teal-800 relative p-8'>
+          <div className='bg-red-500 text-white font-bold rounded-[4px] h-[40px] w-[120px] text-center flex items-center justify-center'>FEATURED</div>
+          <div className='absolute bottom-0'>
+            <p className='text-[#F5C518] font-bold'>OCT 24, 2023</p>
+            <p className='font-presser-bold text-[32px] leading-tight whitespace-wrap'>WHY MINIMALIST DESIGN <br /> IS BORING</p>
+          </div>
+        </div>
+        <div className='h-[132px] w-full bg-amber-900'></div>
+        <div></div>
       </div>
-      <div className='border-y-amber-400 w-[714px] h-[591px] bg-black rounded-[24px]'>
 
+      {/* card two */}
+   
+      <div className='border-y-amber-400 w-[714px] h-[591px] bg-red-100 rounded-[38px] overflow-hidden'>
+        <div className='h-[459px] bg-teal-800 relative p-8'>
+          <div className='bg-red-500 text-white font-bold rounded-[4px] h-[40px] w-[120px] text-center flex items-center justify-center'>PROCESS</div>
+          <div className='absolute bottom-0'>
+            <p className='text-[#F5C518] font-bold'>OCT 24, 2023</p>
+            <p className='font-presser-bold text-[32px] leading-tight whitespace-wrap'>MASTERING THE ART <br /> OF CREATIVE CHAOS</p>
+          </div>
+        </div>
+        <div className='h-[132px] w-full bg-amber-900'></div>
+        <div></div>
       </div>
-
     </div>
     
     </div>
