@@ -82,8 +82,14 @@ function Blog() {
             <p className='font-presser-bold text-[32px] leading-tight whitespace-wrap'>MASTERING THE ART <br /> OF CREATIVE CHAOS</p>
           </div>
         </div>
-        <div className='h-[132px] w-full bg-[#121912]'></div>
-        <div></div>
+        <div className='h-[132px] w-full bg-[#121912] px-12 py-2.5'>
+          <p className='text-[#7A8A9E] font-maisonneue-demi pb-2'>How to harness messiness to fuel your best ideas. <br /> Structure is overated</p>
+          <hr className='mb-2.5'/>
+          <div className='flex items-center justify-between'>
+            <div className='rounded-full bg-[#1A2230] text-[#4A5A6A] px-4 p-1 text-[12px] font-bold'>OPINION</div>
+            <div className='h-[40px] w-[40px] bg-[#F5C518] rounded-full'><i class="ri-arrow-right-up-line text-black"></i></div>
+          </div>
+        </div>
       </div>
     </div>
     
