@@ -352,3 +352,22 @@ html.lenis {
 .contact-submit:hover {
   transform: scale(1.03);
 }
+
+
+.four {
+  background-image: url('../assets/artistrebelWorkBg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  
+}
+
+.contact-bg-three {
+  background-image: url('./assets/artistrebelWorkBg.webp');
+  background-size: 99% 80%; /* Stretch to fit exactly */
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: none; /* Hidden on mobile */
+}
