@@ -72,7 +72,7 @@ function Blog() {
             <div className="bg-red-500 text-[12px] sm:text-[16px] text-white font-bold rounded-[3px] rounded-tl-[30px]  sm:rounded-[4px] h-[30px] sm:h-[40px] w-[100px] sm:w-[120px] text-center flex items-center justify-center">
               FEATURED
             </div>
-            <div className="relative sm:bottom-3">
+            <div className="relative sm:absolute sm:bottom-3">
               <p className="text-[#F5C518] text-[10px] sm:text-[18px] pt-1 font-bold">OCT 24, 2023</p>
               <p className="font-presser-bold sm:text-[32px] leading-tight whitespace-wrap">
                 WHY MINIMALIST DESIGN <br className="hidden sm:inline-block"/> IS BORING
@@ -109,7 +109,7 @@ function Blog() {
             <div className="bg-red-500 text-[12px] sm:text-[16px] text-white font-bold rounded-[3px] rounded-tl-[30px]  sm:rounded-[4px] h-[30px] sm:h-[40px] w-[100px] sm:w-[120px] text-center flex items-center justify-center">
               PROCESS
             </div>
-            <div className="relative sm:bottom-3">
+            <div className="relative sm:absolute sm:bottom-3">
               <p className="text-[#F5C518]  text-[10px] sm:text-[18px] pt-1 font-bold">OCT 24, 2023</p>
               <p className="font-presser-bold sm:text-[32px] leading-tight whitespace-wrap">
                 MASTERING THE ART <br className="hidden sm:inline-block"/> OF CREATIVE CHAOS
