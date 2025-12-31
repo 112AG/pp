@@ -25,7 +25,7 @@ const ServiceCard = ({ borderColor, activeTabBg, titleParts, description, arrowB
       <p className="text-gray-400 text-[12px] leading-tight sm:text-lg max-w-md">
         {description}
       </p>
-      <div className="mt-4 sm:mt-12 bg-[#9BA3AF] rounded-2xl w-full h-32 sm:h-48 flex items-center justify-center  overflow-hidden bg-cover bg-center" 
+      <div className="mt-4 sm:mt-12 bg-[#9BA3AF] cursor-pointer rounded-2xl w-full h-32 sm:h-48 flex items-center justify-center  overflow-hidden bg-cover bg-center" 
                style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className={`w-8 h-8 sm:w-16 sm:h-16 rounded-full -rotate-28 ${arrowBg} flex items-center justify-center`}>
           <svg

@@ -16,7 +16,7 @@ function WorkComponent() {
   return (
     <div className="pt-0">
       <div
-        className="h-[1262px] flex items-center relative -top-36 justify-center px-6"
+        className="h-[1562px] flex items-center relative -top-36 justify-center px-6"
         style={{
           backgroundImage: `url(${artistrebelWorkBg})`,
           backgroundSize: "100% 80%", // Stretch to fit exactly
@@ -24,7 +24,7 @@ function WorkComponent() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <img
+        {/* <img
           src={artistrebelStar}
           className="w-[99px] hidden sm:inline-block absolute left-[16%]"
           alt=""
@@ -48,10 +48,10 @@ function WorkComponent() {
           src={artistrebelVs}
           className="w-[210px] absolute hidden sm:inline-block  top-[45%] right-[6%]"
           alt=""
-        />
+        /> */}
         <div className="text-center px-4 sm:px-6 lg:px-8">
           {/* Main Title */}
-          <h1 className="pt-42 text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px] text-black leading-tight tracking-tight font-presser-bold">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px] text-black leading-tight tracking-tight font-presser-bold">
             WORK THAT
             <br />
             <span className="text-orange-600"> SPEAKS </span>LOUDER{" "}
@@ -81,7 +81,7 @@ function WorkComponent() {
           </a>
         </div>
 
-        <div className="absolute bottom-20 rotate-1 left-0 right-0">
+        <div className="absolute bottom-40 rotate-1 left-0 right-0">
           <img src={artistrebeltext} alt="" />
         </div>
       </div>
