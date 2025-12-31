@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import blogbackground from "../assets/blogbackground.webp";
+// import blogbackground from "../assets/blogbackground.webp";
 import artistrebelblog from "../assets/artistrebelblog.webp";
 import artistrebelblogbgtwo from "../assets/artistrebelblogbgtwo.webp";
 import artistrebelblogmail from "../assets/artistrebelblogmail.webp";
@@ -106,7 +106,7 @@ function Blog() {
           }}
         >
           <div className="sm:h-[459px] bg-teal-800 relative pt-4 px-4 sm:px-12 sm:pt-12">
-            <div className="bg-red-500 text-[12px] sm:text-[16px] text-white font-bold rounded-[3px] rounded-tl-[30px]  sm:rounded-[4px] h-[30px] sm:h-[40px] w-[100px] sm:w-[120px] text-center flex items-center justify-center">
+            <div className="text-[12px] sm:text-[16px] text-white font-bold rounded-[3px] rounded-tl-[30px]  sm:rounded-[4px] h-[30px] sm:h-[40px] w-[100px] sm:w-[120px] text-center flex items-center justify-center">
               PROCESS
             </div>
             <div className="relative sm:absolute sm:bottom-3">
@@ -118,7 +118,7 @@ function Blog() {
           </div>
           <div className="sm:h-[132px] w-full bg-[#121912] sm:px-12 sm:py-2.5 px-4 py-2.5">
             <p className="text-[#7A8A9E] text-[12px] sm:text-[14px] font-maisonneue-demi pb-2">
-              How to harness messiness to fuel your best ideas. <br className="hidden sm:inline-block"/> Structure
+              How to harness messiness to fuel your best ideas. <br className="hidden"/> Structure
               is overated
             </p>
             <hr className="mb-2.5" />

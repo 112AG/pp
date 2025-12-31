@@ -7,23 +7,23 @@ import frame5 from "../assets/frames/artistrebelFrames5.webp";
 
 const ProcessStep = ({ color, icon, title, description, frame }) => {
   return (
-    <div className="flex items-center gap-8 max-w-[800px] mx-auto relative z-10">
+    <div className="flex items-center gap-3 sm:gap-8 max-w-[800px] mx-auto relative z-10">
       {/* Icon Circle */}
-      <div className="w-20 h-20 flex items-center justify-center">
+      <div className="max-[640px]:max-w-[40px] max-[640px]:max-h-[40px] sm:w-20 sm:h-20 flex items-center justify-center">
         <img src={frame} alt="frame" className="w-full h-full object-contain" />
       </div>
 
       {/* Content */}
-      <div className="flex-1 bg-[#212121] rounded-3xl px-8 py-6">
+      <div className="flex-1 bg-[#212121] rounded-3xl px-3 max-[380px]:py-2 py-5 sm:px-8 sm:py-6">
         <h3
-          className={`text-[37px] font-presser-bold mb-2 ${color.replace(
+          className={`text-[18px] md:text-[37px] font-presser-bold mg-0 sm:mb-2 ${color.replace(
             "border-",
             "text-"
           )}`}
         >
           {title}
         </h3>
-        <p className="text-gray-400 text-[29px] font-maisonneue-demi leading-tight">
+        <p className="text-gray-400 text-[12px] md:text-[29px] font-maisonneue-demi leading-tight">
           {description}
         </p>
       </div>
@@ -36,14 +36,32 @@ const ProcessSection = () => {
     <section className="three mt-12 py-12 relative z-10">
       <div className="max-w-4xl mx-auto px-8 relative">
         {/* Section Title */}
-        <h2 className="text-6xl md:text-7xl font-black text-white uppercase tracking-tight text-center mb-24 font-presser-bold">
+        <h2
+          className="
+  text-3xl 
+  sm:text-5xl 
+  md:text-6xl 
+  lg:text-7xl 
+  xl:text-8xl
+  font-black 
+  uppercase 
+  tracking-[-0.02em] 
+  text-white 
+  text-center 
+  mb-12 
+  sm:mb-16 
+  md:mb-20 
+  lg:mb-24 
+  font-['Presser','Helvetica_Neue','Arial',sans-serif]
+"
+        >
           THE PROCESS
         </h2>
 
         {/* Timeline Container */}
         <div className="relative">
           {/* Vertical Line (spans full steps area to connect all items) */}
-          <div className="absolute left-[6.5%] top-14 bottom-14 w-[4px] bg-[#2F3742] origin-top timeline-line z-0"></div>
+          <div className="absolute max-[328px]:left-[7.5%] left-[5%] sm:left-[6.3%] md:left-[6.5%] lg:left-[6.5%] top-14 bottom-14 w-[4px] bg-[#2F3742] origin-top timeline-line z-0"></div>
 
           {/* Steps */}
           <div className="space-y-20">
