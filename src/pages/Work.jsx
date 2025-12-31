@@ -11,40 +11,78 @@ import artistrebelUiux from "../assets/workHeroCard/artistrebelUiux.png";
 import artistrebelVs from "../assets/workHeroCard/artistrebelVs.png";
 import artistrebelStar from "../assets/workHeroCard/artistrebelStar.png";
 import artistrebelNBS from "../assets/workHeroCard/artistrebelNBS.png";
+import artistrebeltext from "../assets/artistrebeltext.webp";
 function WorkComponent() {
   return (
     <div className="pt-0">
       <div
-        className="min-h-[1462px] flex items-center relative  justify-center px-6 bg-cover bg-center"
-        style={{ backgroundImage: `url(${artistrebelWorkBg})` }}
+        className="h-[1262px] flex items-center relative -top-36 justify-center px-6"
+        style={{
+          backgroundImage: `url(${artistrebelWorkBg})`,
+          backgroundSize: "100% 80%", // Stretch to fit exactly
+          backgroundPosition: "top center",
+          backgroundRepeat: "no-repeat",
+        }}
       >
-        <img src={artistrebelStar} className="w-[99px] absolute left-[16%]" alt="" />
-        <img src={artistrebelUiux} className="w-[110px] absolute top-[24%] left-[23%]" alt="" />
-        <img src={artistrebelDesign} className="w-[110px] absolute top-[24%] left-[48%]" alt="" />
-        <img src={artistrebelNBS} className="w-[347px] absolute top-[24%] left-[73%]" alt="" />
-        <img src={artistrebelVs} className="w-[210px] absolute top-[45%] right-[6%]" alt="" />
-        <div className="text-center">
+        <img
+          src={artistrebelStar}
+          className="w-[99px] hidden sm:inline-block absolute left-[16%]"
+          alt=""
+        />
+        <img
+          src={artistrebelUiux}
+          className="w-[110px] hidden sm:inline-block absolute top-[20%] left-[23%]"
+          alt=""
+        />
+        <img
+          src={artistrebelDesign}
+          className="w-[110px] hidden sm:inline-block absolute top-[20%] left-[48%]"
+          alt=""
+        />
+        <img
+          src={artistrebelNBS}
+          className="w-[347px] absolute hidden sm:inline-block top-[20%] left-[73%]"
+          alt=""
+        />
+        <img
+          src={artistrebelVs}
+          className="w-[210px] absolute hidden sm:inline-block  top-[45%] right-[6%]"
+          alt=""
+        />
+        <div className="text-center px-4 sm:px-6 lg:px-8">
           {/* Main Title */}
-          <h1 className=" text-[96px] text-black  leading-tight tracking-tight font-presser-bold">
+          <h1 className="pt-42 text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px] text-black leading-tight tracking-tight font-presser-bold">
             WORK THAT
             <br />
-            <span className="text-orange-600"> SPEAKS </span>LOUDER <br />
+            <span className="text-orange-600"> SPEAKS </span>LOUDER{" "}
+            <br className="hidden sm:block" />
             THAN WORDS
           </h1>
 
           {/* Subtitle */}
-          <p className="mt-12 text-[32px] font-presser-medium text-black leading-relaxed">
+          <p className="mt-8 sm:mt-10 lg:mt-12 text-lg sm:text-xl md:text-2xl lg:text-[32px] font-presser-medium text-black leading-relaxed">
             From <span className="bg-yellow-300 px-2">branding</span> to motion,
+            <br className="block sm:hidden" />
             I design
-            <br />
+            <br className="hidden sm:block" />
             experiences that people remember.
           </p>
+
+          {/* Button Image */}
           <a
             href="#"
-            className="block mx-auto max-w-[700px] mt-12 hover:scale-105 transition-transform duration-300"
+            className="inline-block mx-auto mt-8 sm:mt-10 lg:mt-12 max-w-[90%] sm:max-w-[700px] hover:scale-105 transition-transform duration-300"
           >
-            <img src={artistrebelBTN} alt="" className="w-full h-auto block" />
+            <img
+              src={artistrebelBTN}
+              alt="Call to action button"
+              className="w-full h-auto block"
+            />
           </a>
+        </div>
+
+        <div className="absolute bottom-20 rotate-1 left-0 right-0">
+          <img src={artistrebeltext} alt="" />
         </div>
       </div>
 

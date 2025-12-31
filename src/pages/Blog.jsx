@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import blogbackground from "../assets/blogbackground.webp";
+import artistrebelBlogbg from "../assets/artistrebelBlogbg.png";
 import artistrebelblog from "../assets/artistrebelblog.webp";
 import artistrebelblogbgtwo from "../assets/artistrebelblogbgtwo.webp";
 import artistrebelblogmail from "../assets/artistrebelblogmail.webp";
 import Stickers from "../component/Stickers.jsx"
+import artistrebelBlogbgOne from "../assets/artistrebelBlogbgOne.png";
+import artistrebelBlogbgTwo from "../assets/artistrebelBlogbgTwo.png";
 function Blog() {
   const categories = [
     { label: "ALL RANTS", bgColor: "bg-red-500", textColor: "text-white" },
@@ -16,8 +18,8 @@ function Blog() {
 
   return (
     <div>
-      <div className="bg-cover bg-center pt-[90px]"
-        style={{ backgroundImage: `url(${blogbackground})` }}
+      <div className="bg-cover bg-center pt-[90px] bg-emerald-900"
+        style={{ backgroundImage: `url(${artistrebelBlogbg})` }}
       >
         {/* Main content */}
         <div className="flex-1 px-2 flex flex-col items-center justify-center pt-8 pb-24">
@@ -52,7 +54,7 @@ function Blog() {
           {categories.map((category) => (
             <button
               key={category.label}
-              className={`${category.bgColor} ${category.textColor} font-black text-xs md:text-sm px-4 py-2 border-2 border-black hover:opacity-80 transition-opacity`}
+              className={`${category.bgColor} ${category.textColor} font-black hover:bg-fuchsia-800  text-xs md:text-sm px-4 py-2 border-2 border-black hover:opacity-80 transition-opacity`}
             >
               {category.label}
             </button>
@@ -68,7 +70,8 @@ function Blog() {
               "0 30px 60px rgba(0,0,0,0.6), 0 0 40px rgba(245,197,24,0.22), 0 0 120px rgba(245,197,24,0.08)",
           }}
         >
-          <div className="sm:h-[459px] bg-teal-800 relative pt-4 px-4 sm:px-12 sm:pt-12">
+          <div className="h-[260px] sm:h-[459px] relative pt-4 px-4 sm:px-12 sm:pt-12  overflow-hidden bg-cover bg-center"
+                  style={{ backgroundImage: `url(${artistrebelBlogbgOne})`, backgroundSize: `110% 180%` }}>
             <div className="bg-red-500 text-[12px] sm:text-[16px] text-white font-bold rounded-[3px] rounded-tl-[30px]  sm:rounded-[4px] h-[30px] sm:h-[40px] w-[100px] sm:w-[120px] text-center flex items-center justify-center">
               FEATURED
             </div>
@@ -105,8 +108,9 @@ function Blog() {
               "0 30px 60px rgba(30,10,2,0.8), 0 0 40px rgba(255,80,60,0.22), 0 0 120px rgba(255,80,60,0.08)",
           }}
         >
-          <div className="sm:h-[459px] bg-teal-800 relative pt-4 px-4 sm:px-12 sm:pt-12">
-            <div className="text-[12px] sm:text-[16px] text-white font-bold rounded-[3px] rounded-tl-[30px]  sm:rounded-[4px] h-[30px] sm:h-[40px] w-[100px] sm:w-[120px] text-center flex items-center justify-center">
+          <div className="h-[260px] sm:h-[459px] relative pt-4 px-4 sm:px-12 sm:pt-12  overflow-hidden bg-cover bg-center"
+                            style={{ backgroundImage: `url(${artistrebelBlogbgTwo})`, backgroundSize: `110% 160%` }}>
+            <div className="bg-red-500 text-[12px] sm:text-[16px] text-white font-bold rounded-[3px] rounded-tl-[30px]  sm:rounded-[4px] h-[30px] sm:h-[40px] w-[100px] sm:w-[120px] text-center flex items-center justify-center">
               PROCESS
             </div>
             <div className="relative sm:absolute sm:bottom-3">
