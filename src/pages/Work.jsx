@@ -15,8 +15,8 @@ function WorkComponent() {
   return (
     <div className="pt-0">
       <div
-        className="min-h-[1462px] flex items-center relative bg-amber-100 justify-center px-6 bg-cover bg-center"
-        // style={{ backgroundImage: `url(${artistrebelWorkBg})` }}
+        className="min-h-[1462px] flex items-center relative  justify-center px-6 bg-cover bg-center"
+        style={{ backgroundImage: `url(${artistrebelWorkBg})` }}
       >
         <img src={artistrebelStar} className="w-[99px] absolute left-[16%]" alt="" />
         <img src={artistrebelUiux} className="w-[110px] absolute top-[24%] left-[23%]" alt="" />

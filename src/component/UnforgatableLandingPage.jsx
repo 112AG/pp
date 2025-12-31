@@ -2,7 +2,7 @@ import something from "../assets/something.png";
 
 export default function UnforgatableLandingPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div className="min-h-[50vh] flex items-center justify-center p-4">
       <div className="text-center flex flex-col items-center justify-center">
         {/* Main Heading */}
         <h1 className="text-white mb-0">
