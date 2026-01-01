@@ -55,7 +55,7 @@ function Blog() {
           {categories.map((category) => (
             <button
               key={category.label}
-              className={`${category.bgColor} ${category.textColor} font-black hover:bg-fuchsia-800  text-xs md:text-sm px-4 py-2 border-2 border-black hover:opacity-80 transition-opacity`}
+              className={`${category.bgColor} ${category.textColor} font-black hover:bg-gray-300  text-xs md:text-sm px-4 py-2 border-2 border-black hover:opacity-80 transition-opacity`}
             >
               {category.label}
             </button>
