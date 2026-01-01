@@ -22,7 +22,7 @@ export default function UnforgatableLandingPage() {
         </div>
 
         {/* Unforgettable */}
-        <h2 className="text-white text-[20px] min-[434px]:text-[28px] sm:text-[32px] md:text-[48px] xl:text-[72px] 2xl:text-[96px] font-black tracking-wider mb-1 font-presser-bold">
+        <h2 className="text-white leading-tight text-[20px] min-[434px]:text-[28px] sm:text-[32px] md:text-[48px] xl:text-[72px] 2xl:text-[96px] font-black tracking-wider mb-1 font-presser-bold">
           UNFORGETTABLE
         </h2>
 

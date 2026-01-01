@@ -16,42 +16,42 @@ function WorkComponent() {
   return (
     <div className="pt-0">
       <div
-        className="h-[1562px] flex items-center relative -top-36 justify-center px-6"
+        className="relative h-[602px] sm:h-[902px] lg:h-[1140px] xl:h-[1180px] flex items-center flex-col justify-start  pt-18 sm:pt-[210px] px-6"
         style={{
           backgroundImage: `url(${artistrebelWorkBg})`,
-          backgroundSize: "100% 80%", // Stretch to fit exactly
+          backgroundSize: "100% 100%",
           backgroundPosition: "top center",
           backgroundRepeat: "no-repeat",
         }}
       >
-        {/* <img
+        <img
           src={artistrebelStar}
-          className="w-[99px] hidden sm:inline-block absolute left-[16%]"
+          className="w-[99px] hidden xl:inline-block absolute  xl:left-[4%] 2xl:left-[16%] top-121"
           alt=""
         />
         <img
           src={artistrebelUiux}
-          className="w-[110px] hidden sm:inline-block absolute top-[20%] left-[23%]"
+          className="w-[110px] hidden xl:inline-block absolute top-[10%] xl:left-[12%] 2xl:left-[33%]"
           alt=""
         />
         <img
           src={artistrebelDesign}
-          className="w-[110px] hidden sm:inline-block absolute top-[20%] left-[48%]"
+          className="w-[110px] hidden xl:inline-block absolute top-[10%]  xl:left-[52%] 2xl:left-[48%]"
           alt=""
         />
         <img
           src={artistrebelNBS}
-          className="w-[347px] absolute hidden sm:inline-block top-[20%] left-[73%]"
+          className="w-[347px] absolute hidden 2xl:inline-block top-[10%]  xl:left-[12%] 2xl:left-[73%]"
           alt=""
         />
         <img
           src={artistrebelVs}
-          className="w-[210px] absolute hidden sm:inline-block  top-[45%] right-[6%]"
+          className="w-[210px] absolute hidden xl:inline-block  top-[46%]  xl:right-[4%] 2xl:right-[12%]"
           alt=""
-        /> */}
+        />
         <div className="text-center px-4 sm:px-6 lg:px-8">
           {/* Main Title */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px] text-black leading-tight tracking-tight font-presser-bold">
+          <h1 className="text-[42px] sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px] text-black leading-[34px] sm:leading-[55px] lg:leading-[90px] xl:leading-[84px] tracking-tight font-presser-bold">
             WORK THAT
             <br />
             <span className="text-orange-600"> SPEAKS </span>LOUDER{" "}
@@ -60,11 +60,11 @@ function WorkComponent() {
           </h1>
 
           {/* Subtitle */}
-          <p className="mt-8 sm:mt-10 lg:mt-12 text-lg sm:text-xl md:text-2xl lg:text-[32px] font-presser-medium text-black leading-relaxed">
+          <p className="mt-4 sm:mt-10 lg:mt-12 text-lg sm:text-xl md:text-2xl lg:text-[32px] font-presser-medium text-black leading-[18px] sm:leading-relaxed">
             From <span className="bg-yellow-300 px-2">branding</span> to motion,
             <br className="block sm:hidden" />
             I design
-            <br className="hidden sm:block" />
+            <br className="block" />
             experiences that people remember.
           </p>
 
@@ -81,8 +81,23 @@ function WorkComponent() {
           </a>
         </div>
 
-        <div className="absolute bottom-40 rotate-1 left-0 right-0">
-          <img src={artistrebeltext} alt="" />
+         <div className='absolute bottom-0 left-0 right-0 w-full h-[70px] pt-3 md:pt-0 md:h-[110px] bg-[#FF334B] -rotate-6 md:-rotate-2 overflow-hidden'>
+          <div className="relative w-full h-full overflow-hidden"> 
+            <div className="marquee flex items-center whitespace-nowrap will-change-transform">
+              <span className="inline-block mr-12 uppercase font-presser-bold text-[34px] md:text-[65px]">ui/ux . motion . strategy . web design . art direction . branding</span>
+              <span className="inline-block mr-12 uppercase font-presser-bold text-[34px] md:text-[65px]">ui/ux . motion . strategy . web design . art direction . branding</span>
+                            <span className="inline-block mr-12 uppercase font-presser-bold text-[34px] md:text-[65px]">ui/ux . motion . strategy . web design . art direction . branding</span>
+              <span className="inline-block mr-12 uppercase font-presser-bold text-[34px] md:text-[65px]">ui/ux . motion . strategy . web design . art direction . branding</span>
+              <span className="inline-block mr-12 uppercase font-presser-bold text-[34px] md:text-[65px]">ui/ux . motion . strategy . web design . art direction . branding</span>
+            </div>
+          </div>
+          <style>{`
+            .marquee{animation: marquee 18s linear infinite}
+            @keyframes marquee{
+              0%{transform:translateX(0)}
+              100%{transform:translateX(-50%)}
+            }
+          `}</style>
         </div>
       </div>
 
