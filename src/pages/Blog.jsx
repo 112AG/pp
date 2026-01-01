@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import artistrebelBlogbg from "../assets/artistrebelBlogbg.png";
+import artistrebelBlogbg from "../assets/artistrebelBlogbg.webp";
 import artistrebelblog from "../assets/artistrebelblog.webp";
 import artistrebelblogbgtwo from "../assets/artistrebelblogbgtwo.webp";
+import artistrebeltwos from "../assets/artistrebeltwos.webp";
 import artistrebelblogmail from "../assets/artistrebelblogmail.webp";
 import Stickers from "../component/Stickers.jsx"
-import artistrebelBlogbgOne from "../assets/artistrebelBlogbgOne.png";
-import artistrebelBlogbgTwo from "../assets/artistrebelBlogbgTwo.png";
+import artistrebelBlogbgOne from "../assets/artistrebelBlogbgOne.webp";
+import artistrebelBlogbgTwo from "../assets/artistrebelBlogbgTwo.webp";
 function Blog() {
   const categories = [
     { label: "ALL RANTS", bgColor: "bg-red-500", textColor: "text-white" },
@@ -140,8 +141,8 @@ function Blog() {
 
       <div className="h-full w-full px-4 mx-auto flex flex-col items-center justify-center">
         <div
-          className="h-[320px] min-[498px]:h-[400px] min-[1580px]:h-[497px] w-full mx-4 min-[1040px]:w-[998px] min-[1580px]:w-[1544px] bg-cover bg-center flex items-center justify-center flex-col px-2 overflow-hidden"
-          style={{ backgroundImage: `url(${artistrebelblogbgtwo})` }}
+          className="h-[320px] min-[498px]:h-[400px] min-[1580px]:h-[497px] w-full mx-4 min-[1040px]:w-[998px] min-[1580px]:w-[1544px] bg-cover bg-center flex items-center justify-center flex-col px-2 overflow-hidden rounded-2xl"
+          style={{ backgroundImage: `url(${artistrebeltwos})` }}
         >
           <img src={artistrebelblogmail} alt="" className="mx-auto min-[1580px]:pt-[30px] pt-[16px]" />
           <p className="uppercase text-[#2E3441] text-[24px] sm:text-[45px] font-presser-bold leading-tight">

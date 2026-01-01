@@ -1,8 +1,8 @@
 import React from 'react';
-import artistrebelworkOne from '../assets/artistrebelworkOne.png';
-import artistrebelworkTwoimg from '../assets/artistrebelworkTwoimg.png';
-import artistrebelworkThreeImg from '../assets/artistrebelworkThreeImg.png';
-import artistrebelworkFourImg from '../assets/artistrebelworkFourImg.png';
+import artistrebelworkOne from '../assets/artistrebelworkOne.webp';
+import artistrebelworkTwoimg from '../assets/artistrebelworkTwoimg.webp';
+import artistrebelworkThreeImg from '../assets/artistrebelworkThreeImg.webp';
+import artistrebelworkFourImg from '../assets/artistrebelworkFourImg.webp';
 const ServiceCard = ({ borderColor, activeTabBg, titleParts, description, arrowBg, tabs, backgroundImage }) => {
   return (
 <div className={`rounded-3xl border-4 ${borderColor} border-r-12 border-b-12 bg-black p-3 sm:p-8 relative overflow-hidden hover:scale-105 transition-transform duration-300`}>

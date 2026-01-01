@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/artistrebelogo.png";
+import logo from "../assets/artistrebelogo.webp";
 
 function Header() {
   const [open, setOpen] = useState(false);

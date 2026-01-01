@@ -1,4 +1,4 @@
-import something from "../assets/something.png";
+import something from "../assets/something.webp";
 
 export default function UnforgatableLandingPage() {
   return (
