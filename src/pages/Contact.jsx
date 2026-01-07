@@ -218,7 +218,7 @@ function Contact() {
       {/* THANK YOU SECTION */}
       <div className="relative">
         <a
-          href="tel:+911234567890"
+          href="tel:+917007703054"
           className="w-[32%] sm:w-[26%]  2xl:w-[40%] max-w-[436px] absolute top-3 rotate-0 sm:-top-28 left-[2%]"
         >
           <img src={number} alt="Call us" />

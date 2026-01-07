@@ -9,9 +9,15 @@ const ProcessStep = ({ color, icon, title, description, frame }) => {
   return (
     <div className="flex items-center gap-3 sm:gap-8 max-w-[800px] mx-auto relative z-10">
       {/* Icon Circle */}
-      <div className="max-[640px]:max-w-[40px] max-[640px]:max-h-[40px] sm:w-20 sm:h-20 flex items-center justify-center">
-        <img src={frame} alt="frame" className="w-full h-full object-contain" />
-      </div>
+<div className="w-[40px] h-[40px] sm:w-20 sm:h-20 flex-shrink-0">
+  <img
+    src={frame}
+    alt="frame"
+    className="w-full h-full object-contain"
+    loading="eager"
+  />
+</div>
+
 
       {/* Content */}
       <div className="flex-1 bg-[#212121] rounded-3xl px-3 max-[380px]:py-2 py-5 sm:px-8 sm:py-6">
@@ -33,7 +39,10 @@ const ProcessStep = ({ color, icon, title, description, frame }) => {
 
 const ProcessSection = () => {
   return (
-    <section className="three mt-12 py-12 relative z-10">
+<section
+  className="three mt-12 py-12 relative z-10 will-change-transform"
+  style={{ transform: "translateZ(0)" }}
+>
       <div className="max-w-4xl mx-auto px-8 relative">
         {/* Section Title */}
         <h2

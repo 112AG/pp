@@ -4,7 +4,6 @@ import ProcessStep from "../component/ProcessStep";
 import UnforgatableLandingPage from "../component/UnforgatableLandingPage";
 import { Sticker } from "lucide-react";
 import Stickers from "../component/Stickers";
-import artistrebelWorkBg from "../assets/artistrebelWorkBg.webp";
 import artistrebelBTN from "../assets/workHeroCard/artistrebelBTN.png";
 import artistrebelDesign from "../assets/workHeroCard/artistrebelDesign.png";
 import artistrebelUiux from "../assets/workHeroCard/artistrebelUiux.png";
@@ -12,13 +11,14 @@ import artistrebelVs from "../assets/workHeroCard/artistrebelVs.png";
 import artistrebelStar from "../assets/workHeroCard/artistrebelStar.png";
 import artistrebelNBS from "../assets/workHeroCard/artistrebelNBS.png";
 import artistrebeltext from "../assets/artistrebeltext.webp";
+import artistrebelbground from "../assets/artistrebelbground.webp";
 function WorkComponent() {
   return (
     <div className="pt-0">
       <div
         className="relative h-[602px] sm:h-[902px] lg:h-[1140px] xl:h-[1180px] flex items-center flex-col justify-start  pt-18 sm:pt-[210px] px-6"
         style={{
-          backgroundImage: `url(${artistrebelWorkBg})`,
+          backgroundImage: `url(${artistrebelbground})`,
           backgroundSize: "100% 100%",
           backgroundPosition: "top center",
           backgroundRepeat: "no-repeat",

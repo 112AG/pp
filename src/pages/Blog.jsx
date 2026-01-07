@@ -72,7 +72,7 @@ function Blog() {
           }}
         >
           <div className="h-[260px] sm:h-[459px] relative pt-4 px-4 sm:px-12 sm:pt-12  overflow-hidden bg-cover bg-center"
-                  style={{ backgroundImage: `url(${artistrebelBlogbgOne})`, backgroundSize: `110% 180%` }}>
+                  style={{ backgroundImage: `url(${artistrebelBlogbgTwo})`, backgroundSize: `110% 160%` }}>
             <div className="bg-red-500 text-[12px] sm:text-[16px] text-white font-bold rounded-[3px] rounded-tl-[30px]  sm:rounded-[4px] h-[30px] sm:h-[40px] w-[100px] sm:w-[120px] text-center flex items-center justify-center">
               FEATURED
             </div>
@@ -110,7 +110,7 @@ function Blog() {
           }}
         >
           <div className="h-[260px] sm:h-[459px] relative pt-4 px-4 sm:px-12 sm:pt-12  overflow-hidden bg-cover bg-center"
-                            style={{ backgroundImage: `url(${artistrebelBlogbgTwo})`, backgroundSize: `110% 160%` }}>
+                            style={{ backgroundImage: `url(${artistrebelBlogbgOne})`, backgroundSize: `110% 180%` }}>
             <div className="bg-red-500 text-[12px] sm:text-[16px] text-white font-bold rounded-[3px] rounded-tl-[30px]  sm:rounded-[4px] h-[30px] sm:h-[40px] w-[100px] sm:w-[120px] text-center flex items-center justify-center">
               PROCESS
             </div>

@@ -12,71 +12,133 @@ function Stickers() {
   return (
     <div className="w-full flex items-center justify-center overflow-hidden">
       <div className="relative w-[340px] min-w-[240px] sm:w-[640px] lg:w-[1024px] 2xl:w-[1280px] aspect-[16/7]">
-        <img
-          src={jugadSpecialist}
-          alt="Jugad Specialist"
-          loading="lazy"
-          decoding="async"
-          fetchPriority="low"
-          className="absolute w-[62px] min-[320px]:w-[88px] sm:w-[144px] lg:w-[244px] 2xl:w-[335px] left-[3%] top-[12.5%] sm:left-[9%] lg:left-[8%] 2xl:left-16 sm:top-[25%] lg:top-[18%] 2xl:top-18"
-        />
-        <img
-          src={instagram}
-          
-          alt="Instagram"
-          loading="lazy"
-          decoding="async"
-          fetchPriority="low"
-          className="absolute w-[52px] min-[320px]:w-[74px] sm:w-[184px] lg:w-[284px] 2xl:w-[344px] left-[30%] bottom-[48%] sm:left-[31%] sm:bottom-[42%] 2xl:bottom-70"
-        />
-        <img
-          src={whatsapp}
-          alt="WhatsApp"
-          loading="lazy"
-          decoding="async"
-          fetchPriority="low"
-          className="absolute w-[42px] min-[320px]:w-[60px] sm:w-[164px] lg:w-[264px] 2xl:w-[384px] left-[58%] bottom-[44%] sm:left-[56.5%] lg:left-[57%] 2xl:left-[56%] sm:bottom-[32%] lg:bottom-[42%]"
-        />
-        <img
-          src={pinterest}
-          alt="Pinterest"
-          loading="lazy"
-          decoding="async"
-          fetchPriority="low"
-          className="absolute w-[50px] min-[320px]:w-[70px] sm:w-[144px] lg:w-[242px] 2xl:w-[322px] left-[47%] bottom-[34%] sm:left-[46.5%] lg:left-[50%] 2xl:left-[47%] sm:bottom-[26%] lg:bottom-[32.5%] 2xl:bottom-[36%]"
-        />
-        <img
-          src={youtube}
-          alt="YouTube"
-          loading="lazy"
-          decoding="async"
-          fetchPriority="low"
-          className="absolute w-[59px] min-[320px]:w-[84px] sm:w-[164px] lg:w-[262px] 2xl:w-[384px] bottom-[4%] left-[48.5%] sm:left-[52%] lg:left-[54%] 2xl:left-[50%] sm:bottom-[1.5%] lg:bottom-[5.5%]"
-        />
-        <img
-          src={linkedin}
-          alt="LinkedIn"
-          loading="lazy"
-          decoding="async"
-          fetchPriority="low"
-          className="absolute w-[59px] min-[320px]:w-[84px] sm:w-[166px] lg:w-[312px] 2xl:w-[384px] bottom-0 left-[1.5%] sm:left-[5%] 2xl:left-0"
-        />
-        <img
-          src={designCardio}
-          alt="Design is My Cardio"
-          loading="lazy"
-          decoding="async"
-          fetchPriority="low"
-          className="absolute w-[63px] min-[320px]:w-[90px] sm:w-[164px] lg:w-[284px] 2xl:w-[404px] left-[26%] bottom-0 sm:left-[27%] lg:left-79"
-        />
-        <img
-          src={group126584}
-          alt="Thinking 10% Clicking 90%"
-          loading="lazy"
-          decoding="async"
-          fetchPriority="low"
-          className="absolute w-[72px] min-[320px]:w-[102px] sm:w-[144px] lg:w-[264px] 2xl:w-[362px] left-[71%] rotate-11 bottom-[-2%] sm:left-[74.5%] lg:left-[75%] 2xl:left-[76%] lg:bottom-[0%] 2xl:bottom-[-2%]"
-        />
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <img
+            src={jugadSpecialist}
+            alt="Jugad Specialist"
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            className="absolute w-[62px] min-[320px]:w-[88px] sm:w-[144px] lg:w-[244px] 2xl:w-[335px] left-[3%] top-[12.5%] sm:left-[9%] lg:left-[8%] 2xl:left-16 sm:top-[25%] lg:top-[18%] 2xl:top-18 transition-transform duration-300 hover:scale-95"
+          />
+        </a>
+
+        <a
+          href="https://instagram.com/yourprofile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <img
+            src={instagram}
+            alt="Instagram"
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            className="absolute w-[52px] min-[320px]:w-[74px] sm:w-[184px] lg:w-[284px] 2xl:w-[344px] left-[30%] bottom-[48%] sm:left-[31%] sm:bottom-[42%] 2xl:bottom-70 transition-transform duration-300 hover:scale-95"
+          />
+        </a>
+
+        <a
+          href="https://wa.me/message/PYFNPEEXO6HRG1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <img
+            src={whatsapp}
+            alt="WhatsApp"
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            className="absolute w-[42px] min-[320px]:w-[60px] sm:w-[164px] lg:w-[264px] 2xl:w-[384px] left-[58%] bottom-[44%] sm:left-[56.5%] lg:left-[57%] 2xl:left-[56%] sm:bottom-[32%] lg:bottom-[42%] transition-transform duration-300 hover:scale-95"
+          />
+        </a>
+
+        <a
+          href="https://in.pinterest.com/artist_rebel/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <img
+            src={pinterest}
+            alt="Pinterest"
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            className="absolute w-[50px] min-[320px]:w-[70px] sm:w-[144px] lg:w-[242px] 2xl:w-[322px] left-[47%] bottom-[34%] sm:left-[46.5%] lg:left-[50%] 2xl:left-[47%] sm:bottom-[26%] lg:bottom-[32.5%] 2xl:bottom-[36%] transition-transform duration-300 hover:scale-95"
+          />
+        </a>
+
+        <a
+          href="https://www.youtube.com/@artistrebel"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <img
+            src={youtube}
+            alt="YouTube"
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            className="absolute w-[59px] min-[320px]:w-[84px] sm:w-[164px] lg:w-[262px] 2xl:w-[384px] bottom-[4%] left-[48.5%] sm:left-[52%] lg:left-[54%] 2xl:left-[50%] sm:bottom-[1.5%] lg:bottom-[5.5%] transition-transform duration-300 hover:scale-95"
+          />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/artistrebel/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <img
+            src={linkedin}
+            alt="LinkedIn"
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            className="absolute w-[59px] min-[320px]:w-[84px] sm:w-[166px] lg:w-[312px] 2xl:w-[384px] bottom-0 left-[1.5%] sm:left-[5%] 2xl:left-0 transition-transform duration-300 hover:scale-95"
+          />
+        </a>
+
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <img
+            src={designCardio}
+            alt="Design is My Cardio"
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            className="absolute w-[63px] min-[320px]:w-[90px] sm:w-[164px] lg:w-[284px] 2xl:w-[404px] left-[26%] bottom-0 sm:left-[27%] lg:left-79 transition-transform duration-300 hover:scale-95"
+          />
+        </a>
+
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <img
+            src={group126584}
+            alt="Thinking 10% Clicking 90%"
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            className="absolute w-[72px] min-[320px]:w-[102px] sm:w-[144px] lg:w-[264px] 2xl:w-[362px] left-[71%] rotate-11 bottom-[-2%] sm:left-[74.5%] lg:left-[75%] 2xl:left-[76%] lg:bottom-[0%] 2xl:bottom-[-2%] transition-transform duration-300 hover:scale-95"
+          />
+        </a>
       </div>
     </div>
   );

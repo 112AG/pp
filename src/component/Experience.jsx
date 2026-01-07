@@ -130,7 +130,11 @@ function Experience() {
         );
       });
 
-      gsap.utils.toArray(".timeline-line").forEach((line, i) => {
+      const scopedLines = containerRef.current
+        ? containerRef.current.querySelectorAll(".timeline-line")
+        : document.querySelectorAll(".timeline-line");
+
+      gsap.utils.toArray(scopedLines).forEach((line, i) => {
         gsap.fromTo(
           line,
           { scaleY: 0, transformOrigin: "top center", opacity: 0 },
@@ -208,11 +212,11 @@ function Experience() {
           ease: "none",
           scrollTrigger: {
             trigger: pageRef.current,
-            scroller: "body",
+            // explicitly pin the page container to avoid pinning only the inner text
+            pin: pageRef.current,
             start: 'top 20%',
             end: endValue,
             scrub: 1,
-            pin: true,
             pinSpacing: true,
             anticipatePin: 1,
           }
