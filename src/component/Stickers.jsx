@@ -13,7 +13,7 @@ function Stickers() {
     <div className="w-full flex items-center justify-center overflow-hidden">
       <div className="relative w-[340px] min-w-[240px] sm:w-[640px] lg:w-[1024px] 2xl:w-[1280px] aspect-[16/7]">
         <a
-          href="#"
+          href="/"
           target="_blank"
           rel="noopener noreferrer"
           className="block"
@@ -29,7 +29,7 @@ function Stickers() {
         </a>
 
         <a
-          href="https://instagram.com/yourprofile"
+          href="https://www.instagram.com/artistrebel.in/"
           target="_blank"
           rel="noopener noreferrer"
           className="block"
@@ -109,7 +109,7 @@ function Stickers() {
         </a>
 
         <a
-          href="#"
+          href="/"
           target="_blank"
           rel="noopener noreferrer"
           className="block"
@@ -125,7 +125,7 @@ function Stickers() {
         </a>
 
         <a
-          href="#"
+          href="/"
           target="_blank"
           rel="noopener noreferrer"
           className="block"

@@ -8,6 +8,7 @@ import artistrebelblogmail from "../assets/artistrebelblogmail.webp";
 import Stickers from "../component/Stickers.jsx"
 import artistrebelBlogbgOne from "../assets/artistrebelBlogbgOne.webp";
 import artistrebelBlogbgTwo from "../assets/artistrebelBlogbgTwo.webp";
+import artistrebelcalendar from "../assets/artistrebelcalendar.png";
 function Blog() {
   const categories = [
     { label: "ALL RANTS", bgColor: "bg-red-500", textColor: "text-white" },
@@ -18,7 +19,8 @@ function Blog() {
   ];
 
   return (
-    <div>
+    <div className="flex flex-col gap-16 sm:gap-24 md:gap-40 2xl:gap-[304px]">
+    {/* section one */}
       <div className="bg-cover bg-center pt-[90px] bg-emerald-900"
         style={{ backgroundImage: `url(${artistrebelBlogbg})` }}
       >
@@ -62,8 +64,8 @@ function Blog() {
           ))}
         </div>
       </div>
-
-      <div className="flex px-4 flex-col min-[1580px]:mb-0 min-[1580px]:flex-row items-center justify-center gap-[48px] py-12 mx-auto">
+      {/* section two */}
+      <div className="flex px-4 flex-col min-[1580px]:mb-0 min-[1580px]:flex-row items-center justify-center gap-[56px] jsm:gap-[90px] md:gap-[120px] mx-auto">
         {/* card one */}
         <div className="border-none w-full md:w-[714px] md:h-[591px] bg-red-100 rounded-[38px] overflow-hidden"
           style={{
@@ -73,11 +75,14 @@ function Blog() {
         >
           <div className="h-[260px] sm:h-[459px] relative pt-4 px-4 sm:px-12 sm:pt-12  overflow-hidden bg-cover bg-center"
                   style={{ backgroundImage: `url(${artistrebelBlogbgTwo})`, backgroundSize: `110% 160%` }}>
-            <div className="bg-red-500 text-[12px] sm:text-[16px] text-white font-bold rounded-[3px] rounded-tl-[30px]  sm:rounded-[4px] h-[30px] sm:h-[40px] w-[100px] sm:w-[120px] text-center flex items-center justify-center">
+            <div className="bg-red-500 text-[12px] sm:text-[16px] text-white font-bold rounded-[3px] rounded-tl-[20px]  sm:rounded-[4px] h-[30px] sm:h-[40px] w-[100px] sm:w-[120px] text-center flex items-center justify-center">
               FEATURED
             </div>
-            <div className="relative sm:absolute sm:bottom-3">
+            <div className="absolute bottom-3">
+              <div className="flex items-center justify-start gap-1">
+                <img src={artistrebelcalendar} alt="" className="h-[12px] sm:h-[24px] mt-1" />
               <p className="text-[#F5C518] text-[10px] sm:text-[18px] pt-1 font-bold">OCT 24, 2023</p>
+              </div>
               <p className="font-presser-bold sm:text-[32px] leading-tight whitespace-wrap">
                 WHY MINIMALIST DESIGN <br className="hidden sm:inline-block"/> IS BORING
               </p>
@@ -111,12 +116,14 @@ function Blog() {
         >
           <div className="h-[260px] sm:h-[459px] relative pt-4 px-4 sm:px-12 sm:pt-12  overflow-hidden bg-cover bg-center"
                             style={{ backgroundImage: `url(${artistrebelBlogbgOne})`, backgroundSize: `110% 180%` }}>
-            <div className="bg-red-500 text-[12px] sm:text-[16px] text-white font-bold rounded-[3px] rounded-tl-[30px]  sm:rounded-[4px] h-[30px] sm:h-[40px] w-[100px] sm:w-[120px] text-center flex items-center justify-center">
+            <div className="bg-red-500 text-[12px] sm:text-[16px] text-white font-bold rounded-[3px] rounded-tl-[20px]  sm:rounded-[4px] h-[30px] sm:h-[40px] w-[100px] sm:w-[120px] text-center flex items-center justify-center">
               PROCESS
             </div>
-            <div className="relative sm:absolute sm:bottom-3">
-              <p className="text-[#F5C518]  text-[10px] sm:text-[18px] pt-1 font-bold">OCT 24, 2023</p>
-              <p className="font-presser-bold sm:text-[32px] leading-tight whitespace-wrap">
+            <div className="absolute bottom-3">
+              <div className="flex items-center justify-start gap-1">
+                <img src={artistrebelcalendar} alt="" className="h-[12px] sm:h-[24px] mt-1" />
+              <p className="text-[#F5C518] text-[10px] sm:text-[18px] pt-1 font-bold">OCT 24, 2023</p>
+              </div>              <p className="font-presser-bold sm:text-[32px] leading-tight whitespace-wrap">
                 MASTERING THE ART <br className="hidden sm:inline-block"/> OF CREATIVE CHAOS
               </p>
             </div>
@@ -138,7 +145,7 @@ function Blog() {
           </div>
         </div>
       </div>
-
+      {/* section three */}
       <div className="h-full w-full px-4 mx-auto flex flex-col items-center justify-center">
         <div
           className="h-[320px] min-[498px]:h-[400px] min-[1580px]:h-[497px] w-full mx-4 min-[1040px]:w-[998px] min-[1580px]:w-[1544px] bg-cover bg-center flex items-center justify-center flex-col px-2 overflow-hidden rounded-2xl"
@@ -152,7 +159,7 @@ function Blog() {
             className="uppercase   bg-gradient-to-r from-[#FE3A47] to-[#FA682C] font-presser-bold leading-tight text-[24px] sm:text-[45px] 
            bg-clip-text text-transparent"
           >
-            rebillion
+            rebellion
           </p>
           <p className="uppercase text-[#AEB1B9]">no spam . just chaos.</p>
 
@@ -203,8 +210,7 @@ function Blog() {
     </div>
         </div>
       </div>
-
-      {/* skiter */}
+      {/* section four */}
       <Stickers/>
     </div>
   );

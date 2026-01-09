@@ -14,9 +14,9 @@ import artistrebeltext from "../assets/artistrebeltext.webp";
 import artistrebelbground from "../assets/artistrebelbground.webp";
 function WorkComponent() {
   return (
-    <div className="pt-0">
+    <div className="flex flex-col gap-16 sm:gap-24 md:gap-40 2xl:gap-[274px]">
       <div
-        className="relative h-[602px] sm:h-[902px] lg:h-[1140px] xl:h-[1180px] flex items-center flex-col justify-start  pt-18 sm:pt-[210px] px-6"
+        className="relative h-[602px] sm:h-[902px] lg:h-[1140px] xl:h-[1180px] flex items-center flex-col justify-start  pt-18 sm:pt-[210px] xl:pt-[260px] 2xl:pt-[320px] px-6"
         style={{
           backgroundImage: `url(${artistrebelbground})`,
           backgroundSize: "100% 100%",
@@ -26,27 +26,27 @@ function WorkComponent() {
       >
         <img
           src={artistrebelStar}
-          className="w-[99px] hidden xl:inline-block absolute  xl:left-[4%] 2xl:left-[16%] top-121"
+          className="w-[99px] hidden xl:inline-block absolute  xl:left-[4%] 2xl:left-[16%] top-184"
           alt=""
         />
         <img
           src={artistrebelUiux}
-          className="w-[110px] hidden xl:inline-block absolute top-[10%] xl:left-[12%] 2xl:left-[33%]"
+          className="w-[110px] hidden xl:inline-block absolute top-[18%] xl:left-[12%] 2xl:left-[33%]"
           alt=""
         />
         <img
           src={artistrebelDesign}
-          className="w-[110px] hidden xl:inline-block absolute top-[10%]  xl:left-[52%] 2xl:left-[48%]"
+          className="w-[110px] hidden xl:inline-block absolute top-[18%]  xl:left-[52%] 2xl:left-[48%]"
           alt=""
         />
         <img
           src={artistrebelNBS}
-          className="w-[347px] absolute hidden 2xl:inline-block top-[10%]  xl:left-[12%] 2xl:left-[73%]"
+          className="w-[347px] absolute hidden 2xl:inline-block top-[18%]  xl:left-[12%] 2xl:left-[73%]"
           alt=""
         />
         <img
           src={artistrebelVs}
-          className="w-[210px] absolute hidden xl:inline-block  top-[46%]  xl:right-[4%] 2xl:right-[12%]"
+          className="w-[210px] absolute hidden xl:inline-block  top-[62%] xl:right-[4%] 2xl:right-[12%]"
           alt=""
         />
         <div className="text-center px-4 sm:px-6 lg:px-8">
@@ -62,16 +62,16 @@ function WorkComponent() {
           {/* Subtitle */}
           <p className="mt-4 sm:mt-10 lg:mt-12 text-lg sm:text-xl md:text-2xl lg:text-[32px] font-presser-medium text-black leading-[18px] sm:leading-relaxed">
             From <span className="bg-yellow-300 px-2">branding</span> to motion,
-            <br className="block sm:hidden" />
+            
             I design
-            <br className="block" />
+            
             experiences that people remember.
           </p>
 
           {/* Button Image */}
           <a
             href="#"
-            className="inline-block mx-auto mt-8 sm:mt-10 lg:mt-12 max-w-[90%] sm:max-w-[700px] hover:scale-105 transition-transform duration-300"
+            className="inline-block mx-auto mt-8 sm:mt-10 lg:mt-12 2xl:mt-16 max-w-[90%] sm:max-w-[700px] hover:scale-105 transition-transform duration-300"
           >
             <img
               src={artistrebelBTN}
