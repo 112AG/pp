@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Stickers from "../component/Stickers";
 import number from "../assets/contact/artistrebelnumber.webp";
 import email from "../assets/contact/artistrebelgmail.webp";
@@ -8,6 +8,52 @@ import { Link } from "react-router-dom";
 import layer from "../assets/MobileView/artistrebel-contactlayer.webp";
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    budget: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // You can see collected data in console
+    console.log("Form Data:", formData);
+
+    // Basic required fields check (optional)
+    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim()) {
+      setStatus("Please fill Name, Email & Phone");
+      return;
+    }
+
+    // Here you would normally send the data to backend / EmailJS / Formspree etc.
+    // For now we just show success message
+    setStatus("Thank you! We'll get back to you soon ✨");
+
+    // Reset form
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      service: "",
+      budget: "",
+      message: "",
+    });
+  };
+
   return (
     <div className="h-full flex flex-col gap-12 sm:gap-0">
       {/* MOBILE DEVICES ONLY */}
@@ -24,8 +70,14 @@ function Contact() {
             Ready to Make Your Brand Stand Out?
           </p>
 
-          {/* Form (single-column, centered to match design) */}
-          <form className="w-full max-w-[360px] mx-auto flex flex-col gap-2 mt-1 px-4">
+          {status && (
+            <p className={`mt-2 text-center text-[11px] ${status.includes("Thank") ? "text-green-700" : "text-red-600"}`}>
+              {status}
+            </p>
+          )}
+
+          {/* Form */}
+          <form onSubmit={handleSubmit} className="w-full max-w-[360px] mx-auto flex flex-col gap-2 mt-1 px-4">
             {/* Name */}
             <div>
               <label className="block text-[10px] text-[#131B23] font-bold mb-c">
@@ -33,6 +85,9 @@ function Contact() {
               </label>
               <input
                 type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 placeholder="Your Full Name"
                 className="w-full placeholder:text-[10px] h-[30px] text-sm px-3 rounded-[2px] bg-[#131B23] text-white placeholder-gray-400 focus:outline-none contact-form-input"
               />
@@ -45,6 +100,9 @@ function Contact() {
               </label>
               <input
                 type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="Your Email Address"
                 className="w-full placeholder:text-[10px] h-[30px] text-sm px-3 rounded-sm bg-[#131B23] text-white placeholder-gray-400 focus:outline-none contact-form-input"
               />
@@ -57,6 +115,9 @@ function Contact() {
               </label>
               <input
                 type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
                 placeholder="+91"
                 className="w-full placeholder:text-[10px] h-[30px] text-sm px-3 rounded-sm bg-[#131B23] text-white placeholder-gray-400 focus:outline-none contact-form-input"
               />
@@ -69,6 +130,9 @@ function Contact() {
               </label>
               <input
                 type="text"
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
                 placeholder="What do you need help with?"
                 className="w-full placeholder:text-[10px] h-[30px] text-sm px-3 rounded-sm bg-[#131B23] text-white placeholder-gray-400 focus:outline-none contact-form-input"
               />
@@ -81,6 +145,9 @@ function Contact() {
               </label>
               <input
                 type="text"
+                name="budget"
+                value={formData.budget}
+                onChange={handleChange}
                 placeholder="Estimated Budget"
                 className="w-full placeholder:text-[10px] h-[30px] text-sm px-3 rounded-sm bg-[#131B23] text-white placeholder-gray-400 focus:outline-none contact-form-input"
               />
@@ -92,13 +159,16 @@ function Contact() {
                 Message
               </label>
               <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Tell me about your project"
                 rows={2}
                 className="w-full placeholder:text-[10px] text-sm px-3 py-2 rounded-sm bg-[#131B23] text-white placeholder-gray-400 focus:outline-none resize-none contact-form-input"
               />
             </div>
 
-            {/* Submit Button (full-width) */}
+            {/* Submit Button */}
             <div className="">
               <button
                 type="submit"
@@ -127,8 +197,14 @@ function Contact() {
             Ready to Make Your Brand Stand Out?
           </p>
 
+          {status && (
+            <p className={`mt-6 text-center ${status.includes("Thank") ? "text-green-700" : "text-red-600"}`}>
+              {status}
+            </p>
+          )}
+
           {/* Form */}
-          <form className="w-full max-w-4xl grid grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-6">
+          <form onSubmit={handleSubmit} className="w-full max-w-4xl grid grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-6">
             {/* Name */}
             <div>
               <label className="block text-[10px] sm:text-sm xl:text-[20px] text-[#131B23] font-semibold mb-1 sm:mb-2">
@@ -136,6 +212,9 @@ function Contact() {
               </label>
               <input
                 type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 placeholder="Your Full Name"
                 className="w-full px-2 sm:px-4 xl:px-8 xl:py-6 py-1.5 sm:py-3 rounded-md bg-[#131B23] text-white placeholder-gray-400 placeholder:text-[12px] focus:outline-none"
               />
@@ -148,6 +227,9 @@ function Contact() {
               </label>
               <input
                 type="text"
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
                 placeholder="What do you need help with?"
                 className="w-full px-2 sm:px-4 xl:px-8 xl:py-6 py-1.5 sm:py-3 rounded-[6px] bg-[#131B23] text-white placeholder-gray-400 placeholder:text-[12px] focus:outline-none"
               />
@@ -160,6 +242,9 @@ function Contact() {
               </label>
               <input
                 type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="Your Email Address"
                 className="w-full px-2 sm:px-4 xl:px-8 xl:py-6 py-1.5 sm:py-3 rounded-[6px] bg-[#131B23] text-white placeholder-gray-400 placeholder:text-[12px] focus:outline-none"
               />
@@ -172,6 +257,9 @@ function Contact() {
               </label>
               <input
                 type="text"
+                name="budget"
+                value={formData.budget}
+                onChange={handleChange}
                 placeholder="Estimated Budget"
                 className="w-full px-2 sm:px-4 xl:px-8 xl:py-6 py-1.5 sm:py-3 rounded-[6px] bg-[#131B23] text-white placeholder-gray-400 placeholder:text-[12px] focus:outline-none"
               />
@@ -185,6 +273,9 @@ function Contact() {
               </label>
               <input
                 type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
                 placeholder="+91"
                 className="w-full px-2 sm:px-4 xl:px-8 xl:py-6 py-1.5 sm:py-3 rounded-[6px] bg-[#131B23] text-white placeholder-gray-400 placeholder:text-[12px] focus:outline-none"
               />
@@ -197,6 +288,9 @@ function Contact() {
               </label>
               <input
                 type="text"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Tell me about your project"
                 className="w-full px-2 sm:px-4 xl:px-8 xl:py-6 py-1.5 sm:py-3 rounded-[6px] bg-[#131B23] text-white placeholder-gray-400 placeholder:text-[12px] focus:outline-none"
               />
@@ -207,7 +301,7 @@ function Contact() {
           <div className="mt-4 sm:mt-10 2xl:scale-140">
             <button
               type="submit"
-              className="px-7 sm:px-12 font-presser-bold py-2.5 sm:py-4 bg-[#EE3C4B] text-white font-bold text-[12px] sm:text-lg rounded-[6px] hover:scale-105 transition-transform duration-300 shadow-[0_6px_0_#0B0E14]"
+              className="px-7 sm:px-12 cursor-pointer font-presser-bold py-2.5 sm:py-4 bg-[#EE3C4B] text-white font-bold text-[12px] sm:text-lg rounded-[6px] hover:scale-105 transition-transform duration-300 shadow-[0_6px_0_#0B0E14]"
             >
               Let's Connect
             </button>
