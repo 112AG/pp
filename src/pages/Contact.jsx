@@ -6,6 +6,8 @@ import location from "../assets/contact/artistrebelahemdabad.webp";
 import tag from "../assets/contact/artistrebeltag.webp";
 import { Link } from "react-router-dom";
 import layer from "../assets/MobileView/artistrebel-contactlayer.webp";
+import emailjs from "@emailjs/browser";
+
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -27,32 +29,47 @@ function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const handleSubmit = (e) => {
+  e.preventDefault();
 
-    // You can see collected data in console
-    console.log("Form Data:", formData);
+  if (!formData.name || !formData.email || !formData.phone) {
+    setStatus("Please fill Name, Email & Phone");
+    return;
+  }
 
-    // Basic required fields check (optional)
-    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim()) {
-      setStatus("Please fill Name, Email & Phone");
-      return;
-    }
+  emailjs
+    .send(
+      "service_fwojmtk",      // e.g. service_xxxxx
+      "template_plegf5r",     // e.g. contact_form
+      {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        budget: formData.budget,
+        message: formData.message,
+      },
+      "4X2-7geZnd1eDgyqU"       // EmailJS public key
+    )
+    .then(
+      () => {
+        setStatus("Thank you! We'll get back to you soon ✨");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          budget: "",
+          message: "",
+        });
+      },
+      (error) => {
+        console.error(error);
+        setStatus("Something went wrong. Please try again.");
+      }
+    );
+};
 
-    // Here you would normally send the data to backend / EmailJS / Formspree etc.
-    // For now we just show success message
-    setStatus("Thank you! We'll get back to you soon ✨");
-
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      service: "",
-      budget: "",
-      message: "",
-    });
-  };
 
   return (
     <div className="h-full flex flex-col gap-12 sm:gap-0">
@@ -71,13 +88,20 @@ function Contact() {
           </p>
 
           {status && (
-            <p className={`mt-2 text-center text-[11px] ${status.includes("Thank") ? "text-green-700" : "text-red-600"}`}>
+            <p
+              className={`mt-2 text-center text-[11px] ${
+                status.includes("Thank") ? "text-green-700" : "text-red-600"
+              }`}
+            >
               {status}
             </p>
           )}
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="w-full max-w-[360px] mx-auto flex flex-col gap-2 mt-1 px-4">
+          <form
+            onSubmit={handleSubmit}
+            className="w-full max-w-[360px] mx-auto flex flex-col gap-2 mt-1 px-4"
+          >
             {/* Name */}
             <div>
               <label className="block text-[10px] text-[#131B23] font-bold mb-c">
@@ -198,13 +222,21 @@ function Contact() {
           </p>
 
           {status && (
-            <p className={`mt-6 text-center ${status.includes("Thank") ? "text-green-700" : "text-red-600"}`}>
+            <p
+              className={`mt-6 text-center ${
+                status.includes("Thank") ? "text-green-700" : "text-red-600"
+              }`}
+            >
               {status}
             </p>
           )}
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="w-full max-w-4xl grid grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-6">
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col items-center gap-4 sm:gap-6"
+          >
+            <div className="w-full max-w-4xl grid grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-6">
             {/* Name */}
             <div>
               <label className="block text-[10px] sm:text-sm xl:text-[20px] text-[#131B23] font-semibold mb-1 sm:mb-2">
@@ -295,17 +327,17 @@ function Contact() {
                 className="w-full px-2 sm:px-4 xl:px-8 xl:py-6 py-1.5 sm:py-3 rounded-[6px] bg-[#131B23] text-white placeholder-gray-400 placeholder:text-[12px] focus:outline-none"
               />
             </div>
+            </div>
+            {/* Submit Button */}
+            <div className="mt-4 sm:mt-10 2xl:scale-140">
+              <button
+                type="submit"
+                className="px-7 sm:px-12 cursor-pointer font-presser-bold py-2.5 sm:py-4 bg-[#EE3C4B] text-white font-bold text-[12px] sm:text-lg rounded-[6px] hover:scale-105 transition-transform duration-300 shadow-[0_6px_0_#0B0E14]"
+              >
+                Let's Connect
+              </button>
+            </div>
           </form>
-
-          {/* Submit Button */}
-          <div className="mt-4 sm:mt-10 2xl:scale-140">
-            <button
-              type="submit"
-              className="px-7 sm:px-12 cursor-pointer font-presser-bold py-2.5 sm:py-4 bg-[#EE3C4B] text-white font-bold text-[12px] sm:text-lg rounded-[6px] hover:scale-105 transition-transform duration-300 shadow-[0_6px_0_#0B0E14]"
-            >
-              Let's Connect
-            </button>
-          </div>
         </div>
       </div>
 

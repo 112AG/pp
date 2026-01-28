@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Work from "./pages/Work";
 import Blog from "./pages/Blog";
 import Header from "./pages/Header";
+import Footer from "./pages/Footer"
 
 function App() {
   useEffect(() => {
@@ -42,7 +43,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/work" element={<Work />} />
+
       </Routes>
+      {/* <Footer/> */}
     </div>
   );
 }
